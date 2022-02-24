@@ -5,15 +5,16 @@
 <body>
      
 
-    <div class="login-box   align-self-end">
+    <div class="login-box">
         <div class="login-logo">
-            <a href="@Url.Action("Index", "Login")">Inicia sesión para acceder a la Historia Clínica Electronica (HCE)</a>
+            <a href="@Url.Action("Index", "Login")"> </a>
         </div>
 
         <!-- /.login-logo -->
         <div class="card">
-            <div class="card-body login-card-body">
-                <p class="login-box-msg">Iniciar Sesión</p>
+            <div class="card-body">
+                <p style="color: #0043A5" class="login-box-msg"><strong>Iniciar Sesión</strong></p>
+                <p> Inicia sesión para acceder a la Historia Clínica Electronica (HCE)</p>
                 <form id="frmLogin" action="#" method="post">
                     <div class="input-group mb-3">
                         <input id="Login" type="text" class="form-control" placeholder="DNI*" required>
@@ -32,23 +33,26 @@
                         </div>
                     </div>
                     <div id="messageError" class="alert alert-danger" role="alert"></div>
-                    <div class="row">
-                        <!-- /.col -->
-                        <div class="col-12">
-                            <button id="btnLogin" type="button" class="btn btn-success  btn-block">Ingresar</button>
-                        </div>
-                        <!-- /.col -->
-                    </div>
+
 
                     ¿Tienes problemas para iniciar sesión? Te sugerimos
 
+                    
+                        <!-- /.col -->
+                        <p class="mb-0">
+                            <a href="@Url.Action("", "")" class="text-center"><strong>Recuperar tu contraseña</STRONG></a>
+                        </p>
+                        <!-- /.col -->
+                   <br />
                     <div class="row">
                         <!-- /.col -->
                         <div class="col-12">
-                            <button id=" " type="button" class="btn btn-primary  btn-block">Recuperar tu contraseña</button>
+                            <button id="btnLogin" type="button" style="background-color:#82C534" class="btn btn-success  btn-block">Ingresar</button>
                         </div>
                         <!-- /.col -->
                     </div>
+
+
                 </form>
                 <!-- /.social-auth-links -->
                 @*<p class="mb-1">

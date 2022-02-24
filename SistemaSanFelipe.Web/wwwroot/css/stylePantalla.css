@@ -8,3 +8,49 @@
     background-color: #66999;
 }
 
+.login-card-body,
+.register-card-body {
+    background: white;
+    border-top: -1;
+    color: #666;
+    padding: 80px;
+    border-radius: 70%;
+    width: 400px;
+}
+
+.login-logo,
+.register-logo {
+    font-size: 2.1rem;
+    font-weight: 400;
+    margin-bottom: .9rem;
+    text-align: center;
+}
+
+.login-page,
+.register-page {
+    align-items: center;
+    background: #000000;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+}
+
+
+
+
+.login-box-msg,
+.register-box-msg {
+    margin: 0;
+    padding: 0 20px 20px;
+    text-align: center;
+}
+
+.social-auth-links {
+    margin: 10px 0;
+}
+
+.Slogin {
+    width: 300px;
+    margin-bottom: 34px;
+    flex-basis: 40%;
+}
