@@ -1,0 +1,10 @@
+﻿ Estimado Usuario:
+ 
+    Muchas Gracias..
+	
+	Su Registro a Boleta Electronica EKT se realizo con exito.
+    Estamos Felices por Tenerlo Con Nosotros.
+	Con el siguiente enlace : {URL_NEWUSER}  Podra Acceder a nuestro Sistema poniendo sus credenciales creadas.
+
+    Saludos Cordiales, 
+    Boleta Electronica EKT 

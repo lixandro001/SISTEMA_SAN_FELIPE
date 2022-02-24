@@ -1,0 +1,132 @@
+2022-01-13 19:17:10.446 -05:00 [Warning] The remote server returned an error: (500) Internal Server Error.
+System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at Simed.Utilities.Rest.RestClient.Post(String Url, String Json, String Authorization) in C:\Users\usuario\source\repos\.NET\SistemaCreditoSimed\Simed.Utilities\Rest\RestClient.cs:line 51
+   at Simed.Utilities.Rest.RestClient.ProcessPostRequest(String Url, Object Request, String Authorization) in C:\Users\usuario\source\repos\.NET\SistemaCreditoSimed\Simed.Utilities\Rest\RestClient.cs:line 59
+   at SimedCredito.Web.Controllers.FormularioClienteController.EnviarFormularioCliente(IFormFile FormFile1, IFormFile FormFile2, IFormFile FormFile3, IFormFile FormFile4, IFormFile FormFile5, IFormFile FormFile6, IFormFile FormFile7, IFormFile FormFile8, IFormFile FormFile9, IFormFile FormFile10, IFormFile FormFile11, IFormFile FormFile12, IFormFile FormFile13) in C:\Users\usuario\source\repos\.NET\SistemaCreditoSimed\SimedCredito.Web\Controllers\FormularioClienteController.cs:line 1353
+2022-01-13 19:17:16.385 -05:00 [Warning] The remote server returned an error: (500) Internal Server Error.
+System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at Simed.Utilities.Rest.RestClient.Post(String Url, String Json, String Authorization) in C:\Users\usuario\source\repos\.NET\SistemaCreditoSimed\Simed.Utilities\Rest\RestClient.cs:line 51
+   at Simed.Utilities.Rest.RestClient.ProcessPostRequest(String Url, Object Request, String Authorization) in C:\Users\usuario\source\repos\.NET\SistemaCreditoSimed\Simed.Utilities\Rest\RestClient.cs:line 59
+   at SimedCredito.Web.Controllers.FormularioClienteController.EnviarFormularioCliente(IFormFile FormFile1, IFormFile FormFile2, IFormFile FormFile3, IFormFile FormFile4, IFormFile FormFile5, IFormFile FormFile6, IFormFile FormFile7, IFormFile FormFile8, IFormFile FormFile9, IFormFile FormFile10, IFormFile FormFile11, IFormFile FormFile12, IFormFile FormFile13) in C:\Users\usuario\source\repos\.NET\SistemaCreditoSimed\SimedCredito.Web\Controllers\FormularioClienteController.cs:line 1353
+2022-01-13 19:17:25.763 -05:00 [Warning] The remote server returned an error: (500) Internal Server Error.
+System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at Simed.Utilities.Rest.RestClient.Post(String Url, String Json, String Authorization) in C:\Users\usuario\source\repos\.NET\SistemaCreditoSimed\Simed.Utilities\Rest\RestClient.cs:line 51
+   at Simed.Utilities.Rest.RestClient.ProcessPostRequest(String Url, Object Request, String Authorization) in C:\Users\usuario\source\repos\.NET\SistemaCreditoSimed\Simed.Utilities\Rest\RestClient.cs:line 59
+   at SimedCredito.Web.Controllers.FormularioClienteController.EnviarFormularioCliente(IFormFile FormFile1, IFormFile FormFile2, IFormFile FormFile3, IFormFile FormFile4, IFormFile FormFile5, IFormFile FormFile6, IFormFile FormFile7, IFormFile FormFile8, IFormFile FormFile9, IFormFile FormFile10, IFormFile FormFile11, IFormFile FormFile12, IFormFile FormFile13) in C:\Users\usuario\source\repos\.NET\SistemaCreditoSimed\SimedCredito.Web\Controllers\FormularioClienteController.cs:line 1353
+2022-01-13 19:17:44.491 -05:00 [Warning] The remote server returned an error: (500) Internal Server Error.
+System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at Simed.Utilities.Rest.RestClient.Post(String Url, String Json, String Authorization) in C:\Users\usuario\source\repos\.NET\SistemaCreditoSimed\Simed.Utilities\Rest\RestClient.cs:line 51
+   at Simed.Utilities.Rest.RestClient.ProcessPostRequest(String Url, Object Request, String Authorization) in C:\Users\usuario\source\repos\.NET\SistemaCreditoSimed\Simed.Utilities\Rest\RestClient.cs:line 59
+   at SimedCredito.Web.Controllers.FormularioClienteController.EnviarFormularioCliente(IFormFile FormFile1, IFormFile FormFile2, IFormFile FormFile3, IFormFile FormFile4, IFormFile FormFile5, IFormFile FormFile6, IFormFile FormFile7, IFormFile FormFile8, IFormFile FormFile9, IFormFile FormFile10, IFormFile FormFile11, IFormFile FormFile12, IFormFile FormFile13) in C:\Users\usuario\source\repos\.NET\SistemaCreditoSimed\SimedCredito.Web\Controllers\FormularioClienteController.cs:line 1353
+2022-01-13 19:18:10.868 -05:00 [Warning] The remote server returned an error: (500) Internal Server Error.
+System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at Simed.Utilities.Rest.RestClient.Post(String Url, String Json, String Authorization) in C:\Users\usuario\source\repos\.NET\SistemaCreditoSimed\Simed.Utilities\Rest\RestClient.cs:line 51
+   at Simed.Utilities.Rest.RestClient.ProcessPostRequest(String Url, Object Request, String Authorization) in C:\Users\usuario\source\repos\.NET\SistemaCreditoSimed\Simed.Utilities\Rest\RestClient.cs:line 59
+   at SimedCredito.Web.Controllers.FormularioClienteController.EnviarFormularioCliente(IFormFile FormFile1, IFormFile FormFile2, IFormFile FormFile3, IFormFile FormFile4, IFormFile FormFile5, IFormFile FormFile6, IFormFile FormFile7, IFormFile FormFile8, IFormFile FormFile9, IFormFile FormFile10, IFormFile FormFile11, IFormFile FormFile12, IFormFile FormFile13) in C:\Users\usuario\source\repos\.NET\SistemaCreditoSimed\SimedCredito.Web\Controllers\FormularioClienteController.cs:line 1353
+2022-01-13 19:18:16.541 -05:00 [Warning] The remote server returned an error: (500) Internal Server Error.
+System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at Simed.Utilities.Rest.RestClient.Post(String Url, String Json, String Authorization) in C:\Users\usuario\source\repos\.NET\SistemaCreditoSimed\Simed.Utilities\Rest\RestClient.cs:line 51
+   at Simed.Utilities.Rest.RestClient.ProcessPostRequest(String Url, Object Request, String Authorization) in C:\Users\usuario\source\repos\.NET\SistemaCreditoSimed\Simed.Utilities\Rest\RestClient.cs:line 59
+   at SimedCredito.Web.Controllers.FormularioClienteController.EnviarFormularioCliente(IFormFile FormFile1, IFormFile FormFile2, IFormFile FormFile3, IFormFile FormFile4, IFormFile FormFile5, IFormFile FormFile6, IFormFile FormFile7, IFormFile FormFile8, IFormFile FormFile9, IFormFile FormFile10, IFormFile FormFile11, IFormFile FormFile12, IFormFile FormFile13) in C:\Users\usuario\source\repos\.NET\SistemaCreditoSimed\SimedCredito.Web\Controllers\FormularioClienteController.cs:line 1353
+2022-01-13 19:20:04.070 -05:00 [Warning] The remote server returned an error: (500) Internal Server Error.
+System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at Simed.Utilities.Rest.RestClient.Post(String Url, String Json, String Authorization) in C:\Users\usuario\source\repos\.NET\SistemaCreditoSimed\Simed.Utilities\Rest\RestClient.cs:line 51
+   at Simed.Utilities.Rest.RestClient.ProcessPostRequest(String Url, Object Request, String Authorization) in C:\Users\usuario\source\repos\.NET\SistemaCreditoSimed\Simed.Utilities\Rest\RestClient.cs:line 59
+   at SimedCredito.Web.Controllers.FormularioClienteController.EnviarFormularioCliente(IFormFile FormFile1, IFormFile FormFile2, IFormFile FormFile3, IFormFile FormFile4, IFormFile FormFile5, IFormFile FormFile6, IFormFile FormFile7, IFormFile FormFile8, IFormFile FormFile9, IFormFile FormFile10, IFormFile FormFile11, IFormFile FormFile12, IFormFile FormFile13) in C:\Users\usuario\source\repos\.NET\SistemaCreditoSimed\SimedCredito.Web\Controllers\FormularioClienteController.cs:line 1353
+2022-01-13 19:21:04.541 -05:00 [Warning] The remote server returned an error: (500) Internal Server Error.
+System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at Simed.Utilities.Rest.RestClient.Post(String Url, String Json, String Authorization) in C:\Users\usuario\source\repos\.NET\SistemaCreditoSimed\Simed.Utilities\Rest\RestClient.cs:line 51
+   at Simed.Utilities.Rest.RestClient.ProcessPostRequest(String Url, Object Request, String Authorization) in C:\Users\usuario\source\repos\.NET\SistemaCreditoSimed\Simed.Utilities\Rest\RestClient.cs:line 59
+   at SimedCredito.Web.Controllers.FormularioClienteController.EnviarFormularioCliente(IFormFile FormFile1, IFormFile FormFile2, IFormFile FormFile3, IFormFile FormFile4, IFormFile FormFile5, IFormFile FormFile6, IFormFile FormFile7, IFormFile FormFile8, IFormFile FormFile9, IFormFile FormFile10, IFormFile FormFile11, IFormFile FormFile12, IFormFile FormFile13) in C:\Users\usuario\source\repos\.NET\SistemaCreditoSimed\SimedCredito.Web\Controllers\FormularioClienteController.cs:line 1353
+2022-01-13 19:29:23.693 -05:00 [Warning] The remote server returned an error: (500) Internal Server Error.
+System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at Simed.Utilities.Rest.RestClient.Post(String Url, String Json, String Authorization) in C:\Users\usuario\source\repos\.NET\SistemaCreditoSimed\Simed.Utilities\Rest\RestClient.cs:line 51
+   at Simed.Utilities.Rest.RestClient.ProcessPostRequest(String Url, Object Request, String Authorization) in C:\Users\usuario\source\repos\.NET\SistemaCreditoSimed\Simed.Utilities\Rest\RestClient.cs:line 59
+   at SimedCredito.Web.Controllers.FormularioClienteController.EnviarFormularioCliente(IFormFile FormFile1, IFormFile FormFile2, IFormFile FormFile3, IFormFile FormFile4, IFormFile FormFile5, IFormFile FormFile6, IFormFile FormFile7, IFormFile FormFile8, IFormFile FormFile9, IFormFile FormFile10, IFormFile FormFile11, IFormFile FormFile12, IFormFile FormFile13) in C:\Users\usuario\source\repos\.NET\SistemaCreditoSimed\SimedCredito.Web\Controllers\FormularioClienteController.cs:line 1353
+2022-01-13 19:34:04.626 -05:00 [Warning] The operation has timed out.
+System.Net.WebException: The operation has timed out.
+   at System.Net.HttpWebRequest.GetResponse()
+   at Simed.Utilities.Rest.RestClient.Post(String Url, String Json, String Authorization) in C:\Users\usuario\source\repos\.NET\SistemaCreditoSimed\Simed.Utilities\Rest\RestClient.cs:line 51
+   at Simed.Utilities.Rest.RestClient.ProcessPostRequest(String Url, Object Request, String Authorization) in C:\Users\usuario\source\repos\.NET\SistemaCreditoSimed\Simed.Utilities\Rest\RestClient.cs:line 59
+   at SimedCredito.Web.Controllers.FormularioClienteController.EnviarFormularioCliente(IFormFile FormFile1, IFormFile FormFile2, IFormFile FormFile3, IFormFile FormFile4, IFormFile FormFile5, IFormFile FormFile6, IFormFile FormFile7, IFormFile FormFile8, IFormFile FormFile9, IFormFile FormFile10, IFormFile FormFile11, IFormFile FormFile12, IFormFile FormFile13) in C:\Users\usuario\source\repos\.NET\SistemaCreditoSimed\SimedCredito.Web\Controllers\FormularioClienteController.cs:line 1353
+2022-01-13 19:34:52.614 -05:00 [Warning] The remote server returned an error: (500) Internal Server Error.
+System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at Simed.Utilities.Rest.RestClient.Post(String Url, String Json, String Authorization) in C:\Users\usuario\source\repos\.NET\SistemaCreditoSimed\Simed.Utilities\Rest\RestClient.cs:line 51
+   at Simed.Utilities.Rest.RestClient.ProcessPostRequest(String Url, Object Request, String Authorization) in C:\Users\usuario\source\repos\.NET\SistemaCreditoSimed\Simed.Utilities\Rest\RestClient.cs:line 59
+   at SimedCredito.Web.Controllers.FormularioClienteController.EnviarFormularioCliente(IFormFile FormFile1, IFormFile FormFile2, IFormFile FormFile3, IFormFile FormFile4, IFormFile FormFile5, IFormFile FormFile6, IFormFile FormFile7, IFormFile FormFile8, IFormFile FormFile9, IFormFile FormFile10, IFormFile FormFile11, IFormFile FormFile12, IFormFile FormFile13) in C:\Users\usuario\source\repos\.NET\SistemaCreditoSimed\SimedCredito.Web\Controllers\FormularioClienteController.cs:line 1353
+2022-01-13 19:37:31.761 -05:00 [Warning] The operation has timed out.
+System.Net.WebException: The operation has timed out.
+   at System.Net.HttpWebRequest.GetResponse()
+   at Simed.Utilities.Rest.RestClient.Post(String Url, String Json, String Authorization) in C:\Users\usuario\source\repos\.NET\SistemaCreditoSimed\Simed.Utilities\Rest\RestClient.cs:line 51
+   at Simed.Utilities.Rest.RestClient.ProcessPostRequest(String Url, Object Request, String Authorization) in C:\Users\usuario\source\repos\.NET\SistemaCreditoSimed\Simed.Utilities\Rest\RestClient.cs:line 59
+   at SimedCredito.Web.Controllers.FormularioClienteController.EnviarFormularioCliente(IFormFile FormFile1, IFormFile FormFile2, IFormFile FormFile3, IFormFile FormFile4, IFormFile FormFile5, IFormFile FormFile6, IFormFile FormFile7, IFormFile FormFile8, IFormFile FormFile9, IFormFile FormFile10, IFormFile FormFile11, IFormFile FormFile12, IFormFile FormFile13) in C:\Users\usuario\source\repos\.NET\SistemaCreditoSimed\SimedCredito.Web\Controllers\FormularioClienteController.cs:line 1353
+2022-01-13 19:38:10.878 -05:00 [Warning] The remote server returned an error: (500) Internal Server Error.
+System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at Simed.Utilities.Rest.RestClient.Post(String Url, String Json, String Authorization) in C:\Users\usuario\source\repos\.NET\SistemaCreditoSimed\Simed.Utilities\Rest\RestClient.cs:line 51
+   at Simed.Utilities.Rest.RestClient.ProcessPostRequest(String Url, Object Request, String Authorization) in C:\Users\usuario\source\repos\.NET\SistemaCreditoSimed\Simed.Utilities\Rest\RestClient.cs:line 59
+   at SimedCredito.Web.Controllers.FormularioClienteController.EnviarFormularioCliente(IFormFile FormFile1, IFormFile FormFile2, IFormFile FormFile3, IFormFile FormFile4, IFormFile FormFile5, IFormFile FormFile6, IFormFile FormFile7, IFormFile FormFile8, IFormFile FormFile9, IFormFile FormFile10, IFormFile FormFile11, IFormFile FormFile12, IFormFile FormFile13) in C:\Users\usuario\source\repos\.NET\SistemaCreditoSimed\SimedCredito.Web\Controllers\FormularioClienteController.cs:line 1353
+2022-01-13 19:44:23.132 -05:00 [Warning] The operation has timed out.
+System.Net.WebException: The operation has timed out.
+   at System.Net.HttpWebRequest.GetResponse()
+   at Simed.Utilities.Rest.RestClient.Post(String Url, String Json, String Authorization) in C:\Users\usuario\source\repos\.NET\SistemaCreditoSimed\Simed.Utilities\Rest\RestClient.cs:line 51
+   at Simed.Utilities.Rest.RestClient.ProcessPostRequest(String Url, Object Request, String Authorization) in C:\Users\usuario\source\repos\.NET\SistemaCreditoSimed\Simed.Utilities\Rest\RestClient.cs:line 59
+   at SimedCredito.Web.Controllers.FormularioClienteController.EnviarFormularioCliente(IFormFile FormFile1, IFormFile FormFile2, IFormFile FormFile3, IFormFile FormFile4, IFormFile FormFile5, IFormFile FormFile6, IFormFile FormFile7, IFormFile FormFile8, IFormFile FormFile9, IFormFile FormFile10, IFormFile FormFile11, IFormFile FormFile12, IFormFile FormFile13) in C:\Users\usuario\source\repos\.NET\SistemaCreditoSimed\SimedCredito.Web\Controllers\FormularioClienteController.cs:line 1353
+2022-01-13 19:57:01.896 -05:00 [Warning] The remote server returned an error: (500) Internal Server Error.
+System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at Simed.Utilities.Rest.RestClient.Get(String Url, String Authorization) in C:\Users\usuario\source\repos\.NET\SistemaCreditoSimed\Simed.Utilities\Rest\RestClient.cs:line 31
+   at Simed.Utilities.Rest.RestClient.ProcessGetRequest(String Url, String Authorization) in C:\Users\usuario\source\repos\.NET\SistemaCreditoSimed\Simed.Utilities\Rest\RestClient.cs:line 75
+   at SimedCredito.Web.Controllers.FormularioClienteController.DataByCode(String Code) in C:\Users\usuario\source\repos\.NET\SistemaCreditoSimed\SimedCredito.Web\Controllers\FormularioClienteController.cs:line 1390
+2022-01-13 19:58:24.635 -05:00 [Warning] The remote server returned an error: (500) Internal Server Error.
+System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at Simed.Utilities.Rest.RestClient.Get(String Url, String Authorization) in C:\Users\usuario\source\repos\.NET\SistemaCreditoSimed\Simed.Utilities\Rest\RestClient.cs:line 31
+   at Simed.Utilities.Rest.RestClient.ProcessGetRequest(String Url, String Authorization) in C:\Users\usuario\source\repos\.NET\SistemaCreditoSimed\Simed.Utilities\Rest\RestClient.cs:line 75
+   at SimedCredito.Web.Controllers.FormularioClienteController.DataByCode(String Code) in C:\Users\usuario\source\repos\.NET\SistemaCreditoSimed\SimedCredito.Web\Controllers\FormularioClienteController.cs:line 1390
+2022-01-13 19:59:07.633 -05:00 [Warning] The remote server returned an error: (500) Internal Server Error.
+System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at Simed.Utilities.Rest.RestClient.Get(String Url, String Authorization) in C:\Users\usuario\source\repos\.NET\SistemaCreditoSimed\Simed.Utilities\Rest\RestClient.cs:line 31
+   at Simed.Utilities.Rest.RestClient.ProcessGetRequest(String Url, String Authorization) in C:\Users\usuario\source\repos\.NET\SistemaCreditoSimed\Simed.Utilities\Rest\RestClient.cs:line 75
+   at SimedCredito.Web.Controllers.FormularioClienteController.DataByCode(String Code) in C:\Users\usuario\source\repos\.NET\SistemaCreditoSimed\SimedCredito.Web\Controllers\FormularioClienteController.cs:line 1390
+2022-01-13 19:59:40.572 -05:00 [Warning] The remote server returned an error: (500) Internal Server Error.
+System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at Simed.Utilities.Rest.RestClient.Get(String Url, String Authorization) in C:\Users\usuario\source\repos\.NET\SistemaCreditoSimed\Simed.Utilities\Rest\RestClient.cs:line 31
+   at Simed.Utilities.Rest.RestClient.ProcessGetRequest(String Url, String Authorization) in C:\Users\usuario\source\repos\.NET\SistemaCreditoSimed\Simed.Utilities\Rest\RestClient.cs:line 75
+   at SimedCredito.Web.Controllers.FormularioClienteController.DataByCode(String Code) in C:\Users\usuario\source\repos\.NET\SistemaCreditoSimed\SimedCredito.Web\Controllers\FormularioClienteController.cs:line 1390
+2022-01-13 20:00:02.521 -05:00 [Warning] The remote server returned an error: (500) Internal Server Error.
+System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at Simed.Utilities.Rest.RestClient.Get(String Url, String Authorization) in C:\Users\usuario\source\repos\.NET\SistemaCreditoSimed\Simed.Utilities\Rest\RestClient.cs:line 31
+   at Simed.Utilities.Rest.RestClient.ProcessGetRequest(String Url, String Authorization) in C:\Users\usuario\source\repos\.NET\SistemaCreditoSimed\Simed.Utilities\Rest\RestClient.cs:line 75
+   at SimedCredito.Web.Controllers.FormularioClienteController.DataByCode(String Code) in C:\Users\usuario\source\repos\.NET\SistemaCreditoSimed\SimedCredito.Web\Controllers\FormularioClienteController.cs:line 1390
+2022-01-13 20:00:20.793 -05:00 [Warning] The remote server returned an error: (500) Internal Server Error.
+System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at Simed.Utilities.Rest.RestClient.Post(String Url, String Json, String Authorization) in C:\Users\usuario\source\repos\.NET\SistemaCreditoSimed\Simed.Utilities\Rest\RestClient.cs:line 51
+   at Simed.Utilities.Rest.RestClient.ProcessPostRequest(String Url, Object Request, String Authorization) in C:\Users\usuario\source\repos\.NET\SistemaCreditoSimed\Simed.Utilities\Rest\RestClient.cs:line 59
+   at SimedCredito.Web.Controllers.FormularioClienteController.EnviarFormularioCliente(IFormFile FormFile1, IFormFile FormFile2, IFormFile FormFile3, IFormFile FormFile4, IFormFile FormFile5, IFormFile FormFile6, IFormFile FormFile7, IFormFile FormFile8, IFormFile FormFile9, IFormFile FormFile10, IFormFile FormFile11, IFormFile FormFile12, IFormFile FormFile13) in C:\Users\usuario\source\repos\.NET\SistemaCreditoSimed\SimedCredito.Web\Controllers\FormularioClienteController.cs:line 1353
+2022-01-13 20:11:11.157 -05:00 [Warning] The remote server returned an error: (500) Internal Server Error.
+System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at Simed.Utilities.Rest.RestClient.Get(String Url, String Authorization) in C:\Users\usuario\source\repos\.NET\SistemaCreditoSimed\Simed.Utilities\Rest\RestClient.cs:line 31
+   at Simed.Utilities.Rest.RestClient.ProcessGetRequest(String Url, String Authorization) in C:\Users\usuario\source\repos\.NET\SistemaCreditoSimed\Simed.Utilities\Rest\RestClient.cs:line 75
+   at SimedCredito.Web.Controllers.FormularioClienteController.DataByCode(String Code) in C:\Users\usuario\source\repos\.NET\SistemaCreditoSimed\SimedCredito.Web\Controllers\FormularioClienteController.cs:line 1390
+2022-01-13 20:46:08.076 -05:00 [Warning] The remote server returned an error: (500) Internal Server Error.
+System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at Simed.Utilities.Rest.RestClient.Get(String Url, String Authorization) in C:\Users\usuario\source\repos\.NET\SistemaCreditoSimed\Simed.Utilities\Rest\RestClient.cs:line 31
+   at Simed.Utilities.Rest.RestClient.ProcessGetRequest(String Url, String Authorization) in C:\Users\usuario\source\repos\.NET\SistemaCreditoSimed\Simed.Utilities\Rest\RestClient.cs:line 75
+   at SimedCredito.Web.Controllers.FormularioClienteController.DataByCode(String Code) in C:\Users\usuario\source\repos\.NET\SistemaCreditoSimed\SimedCredito.Web\Controllers\FormularioClienteController.cs:line 1390

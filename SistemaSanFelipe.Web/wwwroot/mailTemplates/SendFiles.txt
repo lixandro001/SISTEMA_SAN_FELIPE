@@ -1,0 +1,14 @@
+﻿Estimados Señores de RR.PP.
+
+Se adjunta la siguiente informacion:
+
+	Adquiriente		    :	{ADQUIRED}
+	VIN				    :	{VIN}
+	Titulo			    :	{TITLE}
+	Año				    :	{YEAR}
+	Oficina Registral   :	{OFFICE}
+	Comprobante de Pago :	{RECEIPT}
+
+Saludos Cordiales,
+Boleta Electronica EKT
+

@@ -1,0 +1,9 @@
+﻿body {
+    background-color: #ffdd90;
+    background-image: url('../imagen/imagenprueba1.jpeg') !important;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: #66999;
+}

@@ -1,0 +1,267 @@
+﻿
+@{
+    
+    var profileId = HttpContextAccessor.HttpContext.Session.GetInt32("PROFILE_ID");
+
+}
+@using SistemaSanFelipe.Entity
+
+@using Microsoft.AspNetCore.Http;
+@inject IHttpContextAccessor HttpContextAccessor
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>SAN FELIPE | @ViewBag.Title </title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="@Url.Content("~/plugins/fontawesome-free/css/all.min.css")">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <!-- DataTables -->
+    <link rel="stylesheet" href="@Url.Content("~/plugins/datatables-bs4/css/dataTables.bootstrap4.css")">
+
+
+    <!-- Theme style -->
+    <link rel="stylesheet" href="@Url.Content("~/adminlte/css/adminlte.min.css")">
+    <link rel="stylesheet" href="@Url.Content("~/plugins/jquery-loading/jquery.loading.min.css")" />
+
+    <link rel="stylesheet" href="@Url.Content("~/plugins/sweetalert/dist/sweetalert.css")">
+    <link rel="stylesheet" href="@Url.Content("~/plugins/select2/css/select2.min.css")" />
+    <link rel="stylesheet" href="@Url.Content("~/css/style.css")">
+    <!-- Google Font: Source Sans Pro -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+    @RenderSection("styles", false)
+</head>
+<body class="hold-transition sidebar-mini">
+    <div class="wrapper">
+        <!-- Navbar -->
+        <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+            <!-- Left navbar links -->
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" data-widget="pushmenu" href="#"><i class="fas fa-bars"></i></a>
+                </li>
+            </ul>
+
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link">
+                        Bienvenido(a) :   <strong id="nombreUsuarioLayout"></strong><input id="perfil" type="">
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="@Url.Action("Index", "Login")">
+                        Cerrar Sesión
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <!-- /.navbar -->
+        <!-- Main Sidebar Container -->
+        <aside class="main-sidebar sidebar-dark-primary elevation-4">
+            <!-- Brand Logo -->
+            <a href="@Url.Action("Index", "Main")" class="brand-link">
+
+                <span class="brand-text font-weight-light">SISTEMA</span>
+            </a>
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <!-- Sidebar Menu -->
+                <nav class="mt-2">
+                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+                        <!-- Add icons to the links using the .nav-icon class
+                        with font-awesome or any other icon font library -->
+
+                        <li class="nav-header">OPCIONES</li>
+                        @if (profileId == (int)Enums.Profile.ADMINISTRADOR)
+                        {
+                            /*<li class="nav-item">
+                                <a href="@Url.Action("Cliente", "Main")" class="nav-link">
+                                    <i class="nav-icon far fa-file"></i>
+                                    <p>
+                                        Bandeja de Cliente
+                                    </p>
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a href="@Url.Action("FormularioCliente", "Main")" class="nav-link">
+                                    <i class="nav-icon far fa-file"></i>
+                                    <p>
+                                        Formulario credito Cliente
+                                    </p>
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a href="@Url.Action("FormularioPerfilFinanzas", "Main")" class="nav-link">
+                                    <i class="nav-icon far fa-file"></i>
+                                    <p>
+                                        Formulario Finanzas
+                                    </p>
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a href="@Url.Action("FormularioPerfilGerenteVentas", "Main")" class="nav-link">
+                                    <i class="nav-icon far fa-file"></i>
+                                    <p>
+                                        Formulario Gerente Ventas
+                                    </p>
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a href="@Url.Action("FormularioPerfilAnalistaCredito", "Main")" class="nav-link">
+                                    <i class="nav-icon far fa-file"></i>
+                                    <p>
+                                        Formulario Analista Credito
+                                    </p>
+                                </a>
+                            </li>*/
+                        }
+                        else if (profileId == (int)Enums.Profile.ASESORCOMERCIAL)
+                        {
+                            <li class="nav-item">
+                                <a href="@Url.Action("BandejaComercial", "Main")" class="nav-link">
+                                    <i class="nav-icon far fa-file"></i>
+                                    <p>
+                                        Cliente Comercial
+                                    </p>
+                                </a>
+                            </li>
+                            @*<li class="nav-item">
+                                    <a href="@Url.Action("FormularioCliente", "Main")" class="nav-link">
+                                        <i class="nav-icon far fa-file"></i>
+                                        <p>
+                                            Formulario credito Cliente Comercial
+                                        </p>
+                                    </a>
+                                </li>*@
+                        }
+                        else if (profileId == (int)Enums.Profile.ANALISTACREDITO)
+                        {
+                            <li class="nav-item">
+                                <a href="@Url.Action("Cliente", "Main")" class="nav-link">
+                                    <i class="nav-icon far fa-file"></i>
+                                    <p>
+                                        Cliente Credito
+                                    </p>
+                                </a>
+                            </li>
+                        }
+                        else if (profileId == (int)Enums.Profile.GERENTENEGOCIO)
+                        {
+                            <li class="nav-item">
+                                <a href="@Url.Action("BandejaGerenteVenta", "Main")" class="nav-link">
+                                    <i class="nav-icon far fa-file"></i>
+                                    <p>
+                                        Bandeja de Cliente Venta
+                                    </p>
+                                </a>
+                            </li>
+                        }
+                        else
+                        {
+                            <li class="nav-item">
+                                <a href="@Url.Action("BandejaGerenteFinanzas", "Main")" class="nav-link">
+                                    <i class="nav-icon far fa-file"></i>
+                                    <p>
+                                        Bandeja de Cliente Finanzas
+                                    </p>
+                                </a>
+                            </li>
+                        }
+                        @*else if (profileId == (int)Enums.Profile.FACTURADOR)
+                            {
+                                <li class="nav-item">
+                                    <a href="@Url.Action("TrayBilling", "Main")" class="nav-link">
+                                        <i class="nav-icon far fa-file"></i>
+                                        <p>
+                                            Bandeja Facturador
+                                        </p>
+                                    </a>
+                                </li>
+                            }
+                            else if (profileId == (int)Enums.Profile.GESTOR)
+                            {
+                                <li class="nav-item">
+                                    <a href="@Url.Action("TrayManager", "Main")" class="nav-link">
+                                        <i class="nav-icon far fa-file"></i>
+                                        <p>
+                                            Bandeja de Gestor
+                                        </p>
+                                    </a>
+                                </li>
+
+                            }*@
+                    </ul>
+                </nav>
+                <!-- /.sidebar-menu -->
+            </div>
+            <!-- /.sidebar -->
+        </aside>
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+
+            <!-- Main content -->
+            <section class="content">
+                <br />
+                @RenderBody()
+            </section>
+            <!-- /.content -->
+        </div>
+        <!-- /.content-wrapper -->
+        <footer class="main-footer">
+            <div class="float-right d-none d-sm-block">
+                <b>Version</b> 3.0.0
+            </div>
+        </footer>
+        <!-- Control Sidebar -->
+        <aside class="control-sidebar control-sidebar-dark">
+            <!-- Control sidebar content goes here -->
+        </aside>
+        <!-- /.control-sidebar -->
+    </div>
+    <!-- ./wrapper -->
+    <!-- jQuery -->
+    <script src="@Url.Content("~/plugins/jquery/jquery.min.js")"></script>
+    <!-- jQuery Validation -->
+    <script src="@Url.Content("~/plugins/jquery-validation/jquery.validate.js")"></script>
+    <!-- Bootstrap 4 -->
+    <script src="@Url.Content("~/plugins/jquery-validation/localization/messages_es_PE.js")"></script>
+    <script src="@Url.Content("~/plugins/select2/js/select2.js")"></script>
+
+    <script src="@Url.Content("~/plugins/bootstrap/js/bootstrap.bundle.min.js")"></script>
+
+    <!-- AdminLTE App -->
+    <script src="@Url.Content("~/adminlte/js/adminlte.min.js")"></script>
+    <script src="@Url.Content("~/plugins/jquery-loading/jquery.loading.min.js")"></script>
+    <script src="@Url.Content("~/plugins/sweetalert/dist/sweetalert.min.js")"></script>
+
+    <script>
+        var appURL = "@Url.Content("~/")";
+
+        $(function () {
+
+            Get("Main/GetUserData").done(function (response) {
+                var result = response.data;
+                console.log(result);
+                if (response.code == 0) {
+                    var nombre = result.Fullname;
+                    var perfil = result.ProfileId;
+                    $("#nombreUsuarioLayout").text(nombre);
+                    $("#perfil").val(perfil);
+                }
+            });
+
+        });
+    </script>
+    <script src="@Url.Content("~/js/global.js")"></script>
+    @RenderSection("scripts", false)
+</body>
+</html>

@@ -1,0 +1,122 @@
+2019-11-07 05:58:52.764 -05:00 [Warning] The remote server returned an error: (500) Internal Server Error.
+System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at EKT.FACT.Utilities.Rest.RestClient.Post(String Url, String Json, String Authorization) in D:\ALINH\OPER\BAZ\FACTEKT\Fuentes\EKT.FACT\EKT.FACT.Utilities\Rest\RestClient.cs:line 43
+   at EKT.FACT.Utilities.Rest.RestClient.ProcessPostRequest(String Url, Object Request, String Authorization) in D:\ALINH\OPER\BAZ\FACTEKT\Fuentes\EKT.FACT\EKT.FACT.Utilities\Rest\RestClient.cs:line 51
+   at EKT.FACT.Web.Controllers.LoginController.Validate(LoginRequest Request) in D:\ALINH\OPER\BAZ\FACTEKT\Fuentes\EKT.FACT\EKT.FACT.Web\Controllers\LoginController.cs:line 52
+2019-11-07 05:59:20.739 -05:00 [Warning] The remote server returned an error: (500) Internal Server Error.
+System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at EKT.FACT.Utilities.Rest.RestClient.Post(String Url, String Json, String Authorization) in D:\ALINH\OPER\BAZ\FACTEKT\Fuentes\EKT.FACT\EKT.FACT.Utilities\Rest\RestClient.cs:line 43
+   at EKT.FACT.Utilities.Rest.RestClient.ProcessPostRequest(String Url, Object Request, String Authorization) in D:\ALINH\OPER\BAZ\FACTEKT\Fuentes\EKT.FACT\EKT.FACT.Utilities\Rest\RestClient.cs:line 51
+   at EKT.FACT.Web.Controllers.LoginController.Validate(LoginRequest Request) in D:\ALINH\OPER\BAZ\FACTEKT\Fuentes\EKT.FACT\EKT.FACT.Web\Controllers\LoginController.cs:line 52
+2019-11-07 05:59:46.732 -05:00 [Warning] The remote server returned an error: (500) Internal Server Error.
+System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at EKT.FACT.Utilities.Rest.RestClient.Post(String Url, String Json, String Authorization) in D:\ALINH\OPER\BAZ\FACTEKT\Fuentes\EKT.FACT\EKT.FACT.Utilities\Rest\RestClient.cs:line 43
+   at EKT.FACT.Utilities.Rest.RestClient.ProcessPostRequest(String Url, Object Request, String Authorization) in D:\ALINH\OPER\BAZ\FACTEKT\Fuentes\EKT.FACT\EKT.FACT.Utilities\Rest\RestClient.cs:line 51
+   at EKT.FACT.Web.Controllers.LoginController.Validate(LoginRequest Request) in D:\ALINH\OPER\BAZ\FACTEKT\Fuentes\EKT.FACT\EKT.FACT.Web\Controllers\LoginController.cs:line 52
+2019-11-07 06:06:23.057 -05:00 [Warning] The remote server returned an error: (500) Internal Server Error.
+System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at EKT.FACT.Utilities.Rest.RestClient.Post(String Url, String Json, String Authorization) in D:\ALINH\OPER\BAZ\FACTEKT\Fuentes\EKT.FACT\EKT.FACT.Utilities\Rest\RestClient.cs:line 43
+   at EKT.FACT.Utilities.Rest.RestClient.ProcessPostRequest(String Url, Object Request, String Authorization) in D:\ALINH\OPER\BAZ\FACTEKT\Fuentes\EKT.FACT\EKT.FACT.Utilities\Rest\RestClient.cs:line 51
+   at EKT.FACT.Web.Controllers.LoginController.Validate(LoginRequest Request) in D:\ALINH\OPER\BAZ\FACTEKT\Fuentes\EKT.FACT\EKT.FACT.Web\Controllers\LoginController.cs:line 52
+2019-11-07 06:15:08.383 -05:00 [Warning] Object reference not set to an instance of an object.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at EKT.FACT.Web.Controllers.MainController.UploadFile(IFormFile FormFile) in D:\ALINH\OPER\BAZ\FACTEKT\Fuentes\EKT.FACT\EKT.FACT.Web\Controllers\MainController.cs:line 72
+2019-11-07 06:15:17.375 -05:00 [Warning] Object reference not set to an instance of an object.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at EKT.FACT.Web.Controllers.MainController.UploadFile(IFormFile FormFile) in D:\ALINH\OPER\BAZ\FACTEKT\Fuentes\EKT.FACT\EKT.FACT.Web\Controllers\MainController.cs:line 72
+2019-11-07 06:15:27.478 -05:00 [Warning] Object reference not set to an instance of an object.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at EKT.FACT.Web.Controllers.MainController.UploadFile(IFormFile FormFile) in D:\ALINH\OPER\BAZ\FACTEKT\Fuentes\EKT.FACT\EKT.FACT.Web\Controllers\MainController.cs:line 72
+2019-11-07 07:40:35.256 -05:00 [Warning] The remote server returned an error: (404) Not Found.
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at EKT.FACT.Utilities.Rest.RestClient.Get(String Url, String Authorization) in D:\ALINH\OPER\BAZ\FACTEKT\Fuentes\EKT.FACT\EKT.FACT.Utilities\Rest\RestClient.cs:line 21
+   at EKT.FACT.Utilities.Rest.RestClient.ProcessGetRequest(String Url, String Authorization) in D:\ALINH\OPER\BAZ\FACTEKT\Fuentes\EKT.FACT\EKT.FACT.Utilities\Rest\RestClient.cs:line 67
+   at EKT.FACT.Web.Controllers.LoginController.Validate(LoginRequest Request) in D:\ALINH\OPER\BAZ\FACTEKT\Fuentes\EKT.FACT\EKT.FACT.Web\Controllers\LoginController.cs:line 63
+2019-11-07 07:40:35.455 -05:00 [Error] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: No service for type 'Microsoft.AspNetCore.Http.IHttpContextAccessor' has been registered.
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.AspNetCore.Mvc.Razor.Internal.RazorPagePropertyActivator.<>c__DisplayClass8_0.<CreateActivateInfo>b__1(ViewContext context)
+   at Microsoft.Extensions.Internal.PropertyActivator`1.Activate(Object instance, TContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.Internal.RazorPagePropertyActivator.Activate(Object page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorPageActivator.Activate(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderLayoutAsync(ViewContext context, ViewBufferTextWriter bodyWriter)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeResultAsync(IActionResult result)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResultFilterAsync[TFilter,TFilterAsync]()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResultExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeResultFilters()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2019-11-07 07:40:35.543 -05:00 [Error] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: OnStarting cannot be set because the response has already started.
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ThrowResponseAlreadyStartedException(String value)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.OnStarting(Func`2 callback, Object state)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.Microsoft.AspNetCore.Http.Features.IHttpResponseFeature.OnStarting(Func`2 callback, Object state)
+   at Microsoft.AspNetCore.Http.Internal.DefaultHttpResponse.OnStarting(Func`2 callback, Object state)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.SessionEstablisher..ctor(HttpContext context, String cookieValue, SessionOptions options)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2019-11-07 07:40:35.545 -05:00 [Warning] The response has already started, the error page middleware will not be executed.
+2019-11-07 07:41:51.055 -05:00 [Warning] The remote server returned an error: (404) Not Found.
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at EKT.FACT.Utilities.Rest.RestClient.Get(String Url, String Authorization) in D:\ALINH\OPER\BAZ\FACTEKT\Fuentes\EKT.FACT\EKT.FACT.Utilities\Rest\RestClient.cs:line 21
+   at EKT.FACT.Utilities.Rest.RestClient.ProcessGetRequest(String Url, String Authorization) in D:\ALINH\OPER\BAZ\FACTEKT\Fuentes\EKT.FACT\EKT.FACT.Utilities\Rest\RestClient.cs:line 67
+   at EKT.FACT.Web.Controllers.LoginController.Validate(LoginRequest Request) in D:\ALINH\OPER\BAZ\FACTEKT\Fuentes\EKT.FACT\EKT.FACT.Web\Controllers\LoginController.cs:line 63
+2019-11-07 07:43:10.752 -05:00 [Warning] The remote server returned an error: (404) Not Found.
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at EKT.FACT.Utilities.Rest.RestClient.Get(String Url, String Authorization) in D:\ALINH\OPER\BAZ\FACTEKT\Fuentes\EKT.FACT\EKT.FACT.Utilities\Rest\RestClient.cs:line 21
+   at EKT.FACT.Utilities.Rest.RestClient.ProcessGetRequest(String Url, String Authorization) in D:\ALINH\OPER\BAZ\FACTEKT\Fuentes\EKT.FACT\EKT.FACT.Utilities\Rest\RestClient.cs:line 67
+   at EKT.FACT.Web.Controllers.LoginController.Validate(LoginRequest Request)
+2019-11-07 07:43:43.379 -05:00 [Warning] The remote server returned an error: (404) Not Found.
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at EKT.FACT.Utilities.Rest.RestClient.Get(String Url, String Authorization) in D:\ALINH\OPER\BAZ\FACTEKT\Fuentes\EKT.FACT\EKT.FACT.Utilities\Rest\RestClient.cs:line 21
+   at EKT.FACT.Utilities.Rest.RestClient.ProcessGetRequest(String Url, String Authorization) in D:\ALINH\OPER\BAZ\FACTEKT\Fuentes\EKT.FACT\EKT.FACT.Utilities\Rest\RestClient.cs:line 67
+   at EKT.FACT.Web.Controllers.LoginController.Validate(LoginRequest Request)
+2019-11-07 07:44:32.101 -05:00 [Warning] The remote server returned an error: (500) Internal Server Error.
+System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at EKT.FACT.Utilities.Rest.RestClient.Get(String Url, String Authorization) in D:\ALINH\OPER\BAZ\FACTEKT\Fuentes\EKT.FACT\EKT.FACT.Utilities\Rest\RestClient.cs:line 21
+   at EKT.FACT.Utilities.Rest.RestClient.ProcessGetRequest(String Url, String Authorization) in D:\ALINH\OPER\BAZ\FACTEKT\Fuentes\EKT.FACT\EKT.FACT.Utilities\Rest\RestClient.cs:line 67
+   at EKT.FACT.Web.Controllers.LoginController.Validate(LoginRequest Request)
+2019-11-07 07:45:44.063 -05:00 [Warning] The remote server returned an error: (500) Internal Server Error.
+System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at EKT.FACT.Utilities.Rest.RestClient.Get(String Url, String Authorization) in D:\ALINH\OPER\BAZ\FACTEKT\Fuentes\EKT.FACT\EKT.FACT.Utilities\Rest\RestClient.cs:line 21
+   at EKT.FACT.Utilities.Rest.RestClient.ProcessGetRequest(String Url, String Authorization) in D:\ALINH\OPER\BAZ\FACTEKT\Fuentes\EKT.FACT\EKT.FACT.Utilities\Rest\RestClient.cs:line 67
+   at EKT.FACT.Web.Controllers.LoginController.Validate(LoginRequest Request)
+2019-11-07 07:46:43.275 -05:00 [Warning] The remote server returned an error: (500) Internal Server Error.
+System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at EKT.FACT.Utilities.Rest.RestClient.Get(String Url, String Authorization) in D:\ALINH\OPER\BAZ\FACTEKT\Fuentes\EKT.FACT\EKT.FACT.Utilities\Rest\RestClient.cs:line 21
+   at EKT.FACT.Utilities.Rest.RestClient.ProcessGetRequest(String Url, String Authorization) in D:\ALINH\OPER\BAZ\FACTEKT\Fuentes\EKT.FACT\EKT.FACT.Utilities\Rest\RestClient.cs:line 67
+   at EKT.FACT.Web.Controllers.LoginController.Validate(LoginRequest Request)
+2019-11-07 07:47:16.340 -05:00 [Warning] The remote server returned an error: (500) Internal Server Error.
+System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at EKT.FACT.Utilities.Rest.RestClient.Get(String Url, String Authorization) in D:\ALINH\OPER\BAZ\FACTEKT\Fuentes\EKT.FACT\EKT.FACT.Utilities\Rest\RestClient.cs:line 21
+   at EKT.FACT.Utilities.Rest.RestClient.ProcessGetRequest(String Url, String Authorization) in D:\ALINH\OPER\BAZ\FACTEKT\Fuentes\EKT.FACT\EKT.FACT.Utilities\Rest\RestClient.cs:line 67
+   at EKT.FACT.Web.Controllers.LoginController.Validate(LoginRequest Request)

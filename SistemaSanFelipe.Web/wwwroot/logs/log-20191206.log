@@ -1,0 +1,18 @@
+2019-12-06 19:09:41.383 -05:00 [Warning] The remote server returned an error: (500) Internal Server Error.
+System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at EKT.FACT.Utilities.Rest.RestClient.Get(String Url, String Authorization) in C:\Users\Devops01\source\repos\FACT\EKT.FACT.Utilities\Rest\RestClient.cs:line 22
+   at EKT.FACT.Utilities.Rest.RestClient.ProcessGetRequest(String Url, String Authorization) in C:\Users\Devops01\source\repos\FACT\EKT.FACT.Utilities\Rest\RestClient.cs:line 68
+   at EKT.FACT.Web.Controllers.ReceiptController.GetReceiptManager(String startdate, String enddate, Int32 subsidiaryId, String numorder, String documentNumber) in C:\Users\Devops01\source\repos\FACT\EKT.FACT.Web\Controllers\ReceiptController.cs:line 93
+2019-12-06 19:10:46.876 -05:00 [Warning] The remote server returned an error: (500) Internal Server Error.
+System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at EKT.FACT.Utilities.Rest.RestClient.Get(String Url, String Authorization) in C:\Users\Devops01\source\repos\FACT\EKT.FACT.Utilities\Rest\RestClient.cs:line 22
+   at EKT.FACT.Utilities.Rest.RestClient.ProcessGetRequest(String Url, String Authorization) in C:\Users\Devops01\source\repos\FACT\EKT.FACT.Utilities\Rest\RestClient.cs:line 68
+   at EKT.FACT.Web.Controllers.ReceiptController.GetReceiptManager(String startdate, String enddate, Int32 subsidiaryId, String numorder, String documentNumber) in C:\Users\Devops01\source\repos\FACT\EKT.FACT.Web\Controllers\ReceiptController.cs:line 93
+2019-12-06 19:13:11.472 -05:00 [Warning] The remote server returned an error: (500) Internal Server Error.
+System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at EKT.FACT.Utilities.Rest.RestClient.Get(String Url, String Authorization) in C:\Users\Devops01\source\repos\FACT\EKT.FACT.Utilities\Rest\RestClient.cs:line 22
+   at EKT.FACT.Utilities.Rest.RestClient.ProcessGetRequest(String Url, String Authorization) in C:\Users\Devops01\source\repos\FACT\EKT.FACT.Utilities\Rest\RestClient.cs:line 68
+   at EKT.FACT.Web.Controllers.ReceiptController.GetReceiptManager(String startdate, String enddate, Int32 subsidiaryId, String numorder, String documentNumber) in C:\Users\Devops01\source\repos\FACT\EKT.FACT.Web\Controllers\ReceiptController.cs:line 93

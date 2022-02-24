@@ -1,0 +1,35 @@
+2021-12-18 09:58:25.556 -05:00 [Warning] Ingreso
+2021-12-18 10:41:20.944 -05:00 [Warning] Ingreso
+2021-12-18 11:00:57.201 -05:00 [Warning] Ingreso
+2021-12-18 11:02:24.382 -05:00 [Warning] Ingreso
+2021-12-18 11:08:08.143 -05:00 [Warning] Ingreso
+2021-12-18 11:09:34.713 -05:00 [Warning] Ingreso
+2021-12-18 11:22:36.013 -05:00 [Warning] Ingreso
+2021-12-18 11:23:22.589 -05:00 [Warning] Unable to cast object of type 'System.Guid' to type 'System.String'.
+2021-12-18 11:23:22.594 -05:00 [Error] Unable to cast object of type 'System.Guid' to type 'System.String'.
+2021-12-18 11:23:24.737 -05:00 [Error] An unhandled exception has occurred while executing the request.
+System.InvalidCastException: Unable to cast object of type 'System.Guid' to type 'System.String'.
+   at SimedCredito.Controllers.BandejaController.GetCategoriaCliente(String StartDate, String EndDate, Int32 PerfilId) in C:\Users\usuario\source\repos\.NET\SistemaCreditoSimed\SimedCredito\Controllers\BandejaController.cs:line 48
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-12-18 11:40:21.642 -05:00 [Warning] Ingreso
+2021-12-18 18:40:05.519 -05:00 [Warning] Ingreso
+2021-12-18 18:45:33.954 -05:00 [Warning] Ingreso
+2021-12-18 19:00:32.704 -05:00 [Warning] Ingreso
+2021-12-18 23:54:14.358 -05:00 [Warning] Ingreso
+2021-12-18 23:57:49.752 -05:00 [Warning] Ingreso
+2021-12-18 23:57:56.197 -05:00 [Warning] Ingreso

@@ -1,0 +1,35 @@
+2019-11-11 08:05:37.288 -05:00 [Warning] The remote server returned an error: (500) Internal Server Error.
+System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at EKT.FACT.Utilities.Rest.RestClient.Get(String Url, String Authorization) in D:\ALINH\OPER\BAZ\FACTEKT\Fuentes\EKT.FACT\EKT.FACT.Utilities\Rest\RestClient.cs:line 21
+   at EKT.FACT.Utilities.Rest.RestClient.ProcessGetRequest(String Url, String Authorization) in D:\ALINH\OPER\BAZ\FACTEKT\Fuentes\EKT.FACT\EKT.FACT.Utilities\Rest\RestClient.cs:line 67
+   at EKT.FACT.Web.Controllers.ReceiptController.ExportDetails(ReceiptExportRequest request) in D:\ALINH\OPER\BAZ\FACTEKT\Fuentes\EKT.FACT\EKT.FACT.Web\Controllers\ReceiptController.cs:line 129
+2019-11-11 08:05:43.515 -05:00 [Warning] Value cannot be null.
+Parameter name: s
+System.ArgumentNullException: Value cannot be null.
+Parameter name: s
+   at System.DateTime.ParseExact(String s, String format, IFormatProvider provider)
+   at EKT.FACT.Web.Controllers.ReceiptController.GetReceiptBilling(String startDate, String endDate, Int32 subsidiaryId, String numorder, String documentNumber) in D:\ALINH\OPER\BAZ\FACTEKT\Fuentes\EKT.FACT\EKT.FACT.Web\Controllers\ReceiptController.cs:line 90
+2019-11-11 08:14:31.555 -05:00 [Warning] The operation has timed out.
+System.Net.WebException: The operation has timed out.
+   at System.Net.HttpWebRequest.GetResponse()
+   at EKT.FACT.Utilities.Rest.RestClient.Get(String Url, String Authorization) in D:\ALINH\OPER\BAZ\FACTEKT\Fuentes\EKT.FACT\EKT.FACT.Utilities\Rest\RestClient.cs:line 21
+   at EKT.FACT.Utilities.Rest.RestClient.ProcessGetRequest(String Url, String Authorization) in D:\ALINH\OPER\BAZ\FACTEKT\Fuentes\EKT.FACT\EKT.FACT.Utilities\Rest\RestClient.cs:line 67
+   at EKT.FACT.Web.Controllers.ReceiptController.ExportDetails(ReceiptExportRequest request) in D:\ALINH\OPER\BAZ\FACTEKT\Fuentes\EKT.FACT\EKT.FACT.Web\Controllers\ReceiptController.cs:line 129
+2019-11-11 08:15:40.911 -05:00 [Warning] The remote server returned an error: (500) Internal Server Error.
+System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at EKT.FACT.Utilities.Rest.RestClient.Get(String Url, String Authorization) in D:\ALINH\OPER\BAZ\FACTEKT\Fuentes\EKT.FACT\EKT.FACT.Utilities\Rest\RestClient.cs:line 21
+   at EKT.FACT.Utilities.Rest.RestClient.ProcessGetRequest(String Url, String Authorization) in D:\ALINH\OPER\BAZ\FACTEKT\Fuentes\EKT.FACT\EKT.FACT.Utilities\Rest\RestClient.cs:line 67
+   at EKT.FACT.Web.Controllers.ReceiptController.ExportDetails(ReceiptExportRequest request) in D:\ALINH\OPER\BAZ\FACTEKT\Fuentes\EKT.FACT\EKT.FACT.Web\Controllers\ReceiptController.cs:line 129
+2019-11-11 08:17:14.334 -05:00 [Warning] The remote server returned an error: (500) Internal Server Error.
+System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at EKT.FACT.Utilities.Rest.RestClient.Get(String Url, String Authorization) in D:\ALINH\OPER\BAZ\FACTEKT\Fuentes\EKT.FACT\EKT.FACT.Utilities\Rest\RestClient.cs:line 21
+   at EKT.FACT.Utilities.Rest.RestClient.ProcessGetRequest(String Url, String Authorization) in D:\ALINH\OPER\BAZ\FACTEKT\Fuentes\EKT.FACT\EKT.FACT.Utilities\Rest\RestClient.cs:line 67
+   at EKT.FACT.Web.Controllers.ReceiptController.ExportDetails(ReceiptExportRequest request) in D:\ALINH\OPER\BAZ\FACTEKT\Fuentes\EKT.FACT\EKT.FACT.Web\Controllers\ReceiptController.cs:line 129
+2019-11-11 08:34:31.466 -05:00 [Warning] The process cannot access the file 'D:\ALINH\OPER\BAZ\FACTEKT\Fuentes\EKT.FACT\EKT.FACT.Web\wwwroot\files\111_B080-00033798.pdf' because it is being used by another process.
+System.IO.IOException: The process cannot access the file 'D:\ALINH\OPER\BAZ\FACTEKT\Fuentes\EKT.FACT\EKT.FACT.Web\wwwroot\files\111_B080-00033798.pdf' because it is being used by another process.
+   at System.IO.FileSystem.DeleteFile(String fullPath)
+   at System.IO.File.Delete(String path)
+   at EKT.FACT.Web.Controllers.MainController.UploadFile(IEnumerable`1 FormFile)

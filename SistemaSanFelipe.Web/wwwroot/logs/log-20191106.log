@@ -1,0 +1,36 @@
+2019-11-06 08:26:30.113 -05:00 [Warning] Value cannot be null.
+Parameter name: s
+System.ArgumentNullException: Value cannot be null.
+Parameter name: s
+   at System.DateTime.ParseExact(String s, String format, IFormatProvider provider)
+   at EKT.FACT.Web.Controllers.ReceiptController.GetReceiptManager(String startDate, String endDate, Int32 subsidiaryId, String numorder, String documentNumber) in D:\ALINH\OPER\BAZ\FACTEKT\Fuentes\EKT.FACT\EKT.FACT.Web\Controllers\ReceiptController.cs:line 42
+2019-11-06 08:26:47.264 -05:00 [Warning] Value cannot be null.
+Parameter name: s
+System.ArgumentNullException: Value cannot be null.
+Parameter name: s
+   at System.DateTime.ParseExact(String s, String format, IFormatProvider provider)
+   at EKT.FACT.Web.Controllers.ReceiptController.GetReceiptManager(String startDate, String endDate, Int32 subsidiaryId, String numorder, String documentNumber) in D:\ALINH\OPER\BAZ\FACTEKT\Fuentes\EKT.FACT\EKT.FACT.Web\Controllers\ReceiptController.cs:line 42
+2019-11-06 08:27:48.745 -05:00 [Warning] Value cannot be null.
+Parameter name: s
+System.ArgumentNullException: Value cannot be null.
+Parameter name: s
+   at System.DateTime.ParseExact(String s, String format, IFormatProvider provider)
+   at EKT.FACT.Web.Controllers.ReceiptController.GetReceiptManager(String startDate, String endDate, Int32 subsidiaryId, String numorder, String documentNumber) in D:\ALINH\OPER\BAZ\FACTEKT\Fuentes\EKT.FACT\EKT.FACT.Web\Controllers\ReceiptController.cs:line 42
+2019-11-06 08:28:43.559 -05:00 [Warning] The remote server returned an error: (404) Not Found.
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at EKT.FACT.Utilities.Rest.RestClient.Get(String Url, String Authorization) in D:\ALINH\OPER\BAZ\FACTEKT\Fuentes\EKT.FACT\EKT.FACT.Utilities\Rest\RestClient.cs:line 21
+   at EKT.FACT.Utilities.Rest.RestClient.ProcessGetRequest(String Url, String Authorization) in D:\ALINH\OPER\BAZ\FACTEKT\Fuentes\EKT.FACT\EKT.FACT.Utilities\Rest\RestClient.cs:line 67
+   at EKT.FACT.Web.Controllers.ReceiptController.GetReceiptManager(String startDate, String endDate, Int32 subsidiaryId, String numorder, String documentNumber) in D:\ALINH\OPER\BAZ\FACTEKT\Fuentes\EKT.FACT\EKT.FACT.Web\Controllers\ReceiptController.cs:line 45
+2019-11-06 08:31:48.608 -05:00 [Warning] The remote server returned an error: (404) Not Found.
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at EKT.FACT.Utilities.Rest.RestClient.Get(String Url, String Authorization) in D:\ALINH\OPER\BAZ\FACTEKT\Fuentes\EKT.FACT\EKT.FACT.Utilities\Rest\RestClient.cs:line 21
+   at EKT.FACT.Utilities.Rest.RestClient.ProcessGetRequest(String Url, String Authorization) in D:\ALINH\OPER\BAZ\FACTEKT\Fuentes\EKT.FACT\EKT.FACT.Utilities\Rest\RestClient.cs:line 67
+   at EKT.FACT.Web.Controllers.ReceiptController.GetReceiptManager(String startDate, String endDate, Int32 subsidiaryId, String numorder, String documentNumber) in D:\ALINH\OPER\BAZ\FACTEKT\Fuentes\EKT.FACT\EKT.FACT.Web\Controllers\ReceiptController.cs:line 45
+2019-11-06 08:39:55.765 -05:00 [Warning] The remote server returned an error: (500) Internal Server Error.
+System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at EKT.FACT.Utilities.Rest.RestClient.Get(String Url, String Authorization) in D:\ALINH\OPER\BAZ\FACTEKT\Fuentes\EKT.FACT\EKT.FACT.Utilities\Rest\RestClient.cs:line 21
+   at EKT.FACT.Utilities.Rest.RestClient.ProcessGetRequest(String Url, String Authorization) in D:\ALINH\OPER\BAZ\FACTEKT\Fuentes\EKT.FACT\EKT.FACT.Utilities\Rest\RestClient.cs:line 67
+   at EKT.FACT.Web.Controllers.ReceiptController.GetReceiptManager(String startDate, String endDate, Int32 subsidiaryId, String numorder, String documentNumber) in D:\ALINH\OPER\BAZ\FACTEKT\Fuentes\EKT.FACT\EKT.FACT.Web\Controllers\ReceiptController.cs:line 45

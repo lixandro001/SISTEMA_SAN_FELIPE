@@ -1,0 +1,80 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutLogin.cshtml"; 
+}
+
+<body>
+     
+
+    <div class="login-box   align-self-end">
+        <div class="login-logo">
+            <a href="@Url.Action("Index", "Login")">Inicia sesión para acceder a la Historia Clínica Electronica (HCE)</a>
+        </div>
+
+        <!-- /.login-logo -->
+        <div class="card">
+            <div class="card-body login-card-body">
+                <p class="login-box-msg">Iniciar Sesión</p>
+                <form id="frmLogin" action="#" method="post">
+                    <div class="input-group mb-3">
+                        <input id="Login" type="text" class="form-control" placeholder="DNI*" required>
+                        <div class="input-group-append">
+                            <div class="input-group-text">
+                                <span class="fas fa-envelope"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="input-group mb-3">
+                        <input id="Password" type="password" class="form-control" placeholder="Contraseña*" required>
+                        <div class="input-group-append">
+                            <div class="input-group-text">
+                                <span class="fas fa-lock"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="messageError" class="alert alert-danger" role="alert"></div>
+                    <div class="row">
+                        <!-- /.col -->
+                        <div class="col-12">
+                            <button id="btnLogin" type="button" class="btn btn-success  btn-block">Ingresar</button>
+                        </div>
+                        <!-- /.col -->
+                    </div>
+
+                    ¿Tienes problemas para iniciar sesión? Te sugerimos
+
+                    <div class="row">
+                        <!-- /.col -->
+                        <div class="col-12">
+                            <button id=" " type="button" class="btn btn-primary  btn-block">Recuperar tu contraseña</button>
+                        </div>
+                        <!-- /.col -->
+                    </div>
+                </form>
+                <!-- /.social-auth-links -->
+                @*<p class="mb-1">
+                        <a href="@Url.Action("ForgotPassword", "Login")">Recuperar Clave</a>
+                    </p>
+                    <p class="mb-0">
+                        <a href="@Url.Action("Register", "Login")" class="text-center">Registrarse</a>
+                    </p>*@
+            </div>
+            <!-- /.login-card-body -->
+        </div>
+
+        <div>
+
+        </div>
+
+
+    </div>
+</body>
+
+   
+
+@section scripts{
+    <script src="@Url.Content("~/js/login.js")"></script>
+
+}
+
+<link href="~/css/stylePantalla.css" rel="stylesheet" />
+<link href="~/adminlte/css/sweetalert2.min.css" rel="stylesheet" />

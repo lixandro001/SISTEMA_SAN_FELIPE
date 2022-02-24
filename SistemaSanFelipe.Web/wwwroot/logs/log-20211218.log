@@ -1,0 +1,18 @@
+2021-12-18 11:02:50.182 -05:00 [Warning] The remote server returned an error: (404) Not Found.
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at Simed.Utilities.Rest.RestClient.Get(String Url, String Authorization) in C:\Users\usuario\source\repos\.NET\SistemaCreditoSimed\Simed.Utilities\Rest\RestClient.cs:line 31
+   at Simed.Utilities.Rest.RestClient.ProcessGetRequest(String Url, String Authorization) in C:\Users\usuario\source\repos\.NET\SistemaCreditoSimed\Simed.Utilities\Rest\RestClient.cs:line 75
+   at SimedCredito.Web.Controllers.BandejaController.GetBandejaCliente(String StartDate, String EndDate, Int32 PerfilId) in C:\Users\usuario\source\repos\.NET\SistemaCreditoSimed\SimedCredito.Web\Controllers\BandejaController.cs:line 47
+2021-12-18 11:03:03.117 -05:00 [Warning] The remote server returned an error: (404) Not Found.
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at Simed.Utilities.Rest.RestClient.Get(String Url, String Authorization) in C:\Users\usuario\source\repos\.NET\SistemaCreditoSimed\Simed.Utilities\Rest\RestClient.cs:line 31
+   at Simed.Utilities.Rest.RestClient.ProcessGetRequest(String Url, String Authorization) in C:\Users\usuario\source\repos\.NET\SistemaCreditoSimed\Simed.Utilities\Rest\RestClient.cs:line 75
+   at SimedCredito.Web.Controllers.BandejaController.GetBandejaCliente(String StartDate, String EndDate, Int32 PerfilId) in C:\Users\usuario\source\repos\.NET\SistemaCreditoSimed\SimedCredito.Web\Controllers\BandejaController.cs:line 47
+2021-12-18 11:23:24.993 -05:00 [Warning] The remote server returned an error: (500) Internal Server Error.
+System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at Simed.Utilities.Rest.RestClient.Get(String Url, String Authorization) in C:\Users\usuario\source\repos\.NET\SistemaCreditoSimed\Simed.Utilities\Rest\RestClient.cs:line 31
+   at Simed.Utilities.Rest.RestClient.ProcessGetRequest(String Url, String Authorization) in C:\Users\usuario\source\repos\.NET\SistemaCreditoSimed\Simed.Utilities\Rest\RestClient.cs:line 75
+   at SimedCredito.Web.Controllers.BandejaController.GetBandejaCliente(String StartDate, String EndDate, Int32 PerfilId) in C:\Users\usuario\source\repos\.NET\SistemaCreditoSimed\SimedCredito.Web\Controllers\BandejaController.cs:line 47

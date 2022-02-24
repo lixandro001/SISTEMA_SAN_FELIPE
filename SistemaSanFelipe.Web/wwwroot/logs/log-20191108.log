@@ -1,0 +1,113 @@
+2019-11-08 07:54:47.149 -05:00 [Warning] The remote server returned an error: (404) Not Found.
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at EKT.FACT.Utilities.Rest.RestClient.Get(String Url, String Authorization) in D:\ALINH\OPER\BAZ\FACTEKT\Fuentes\EKT.FACT\EKT.FACT.Utilities\Rest\RestClient.cs:line 21
+   at EKT.FACT.Utilities.Rest.RestClient.ProcessGetRequest(String Url, String Authorization) in D:\ALINH\OPER\BAZ\FACTEKT\Fuentes\EKT.FACT\EKT.FACT.Utilities\Rest\RestClient.cs:line 67
+   at EKT.FACT.Web.Controllers.ReceiptController.Download(ReceiptExportRequest request) in D:\ALINH\OPER\BAZ\FACTEKT\Fuentes\EKT.FACT\EKT.FACT.Web\Controllers\ReceiptController.cs:line 125
+2019-11-08 07:57:09.225 -05:00 [Warning] The remote server returned an error: (404) Not Found.
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at EKT.FACT.Utilities.Rest.RestClient.Get(String Url, String Authorization) in D:\ALINH\OPER\BAZ\FACTEKT\Fuentes\EKT.FACT\EKT.FACT.Utilities\Rest\RestClient.cs:line 21
+   at EKT.FACT.Utilities.Rest.RestClient.ProcessGetRequest(String Url, String Authorization) in D:\ALINH\OPER\BAZ\FACTEKT\Fuentes\EKT.FACT\EKT.FACT.Utilities\Rest\RestClient.cs:line 67
+   at EKT.FACT.Web.Controllers.ReceiptController.Download(ReceiptExportRequest request)
+2019-11-08 07:57:17.088 -05:00 [Warning] Object reference not set to an instance of an object.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at EKT.FACT.Web.Controllers.ReceiptController.Download(ReceiptExportRequest request)
+2019-11-08 07:58:04.347 -05:00 [Warning] Object reference not set to an instance of an object.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at EKT.FACT.Web.Controllers.ReceiptController.Download(ReceiptExportRequest request)
+2019-11-08 08:19:29.786 -05:00 [Warning] The remote server returned an error: (404) Not Found.
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at EKT.FACT.Utilities.Rest.RestClient.Post(String Url, String Json, String Authorization) in D:\ALINH\OPER\BAZ\FACTEKT\Fuentes\EKT.FACT\EKT.FACT.Utilities\Rest\RestClient.cs:line 43
+   at EKT.FACT.Utilities.Rest.RestClient.ProcessPostRequest(String Url, Object Request, String Authorization) in D:\ALINH\OPER\BAZ\FACTEKT\Fuentes\EKT.FACT\EKT.FACT.Utilities\Rest\RestClient.cs:line 51
+   at EKT.FACT.Web.Controllers.MainController.UploadFile(IEnumerable`1 FormFile)
+2019-11-08 08:37:40.949 -05:00 [Warning] The process cannot access the file 'D:\ALINH\OPER\BAZ\FACTEKT\Fuentes\EKT.FACT\EKT.FACT.Web\wwwroot\files\111_B080-00033798.pdf' because it is being used by another process.
+System.IO.IOException: The process cannot access the file 'D:\ALINH\OPER\BAZ\FACTEKT\Fuentes\EKT.FACT\EKT.FACT.Web\wwwroot\files\111_B080-00033798.pdf' because it is being used by another process.
+   at System.IO.FileSystem.DeleteFile(String fullPath)
+   at System.IO.File.Delete(String path)
+   at EKT.FACT.Web.Controllers.MainController.UploadFile(IEnumerable`1 FormFile) in D:\ALINH\OPER\BAZ\FACTEKT\Fuentes\EKT.FACT\EKT.FACT.Web\Controllers\MainController.cs:line 108
+2019-11-08 08:39:33.672 -05:00 [Warning] The process cannot access the file 'D:\ALINH\OPER\BAZ\FACTEKT\Fuentes\EKT.FACT\EKT.FACT.Web\wwwroot\files\111_B080-00033798.pdf' because it is being used by another process.
+System.IO.IOException: The process cannot access the file 'D:\ALINH\OPER\BAZ\FACTEKT\Fuentes\EKT.FACT\EKT.FACT.Web\wwwroot\files\111_B080-00033798.pdf' because it is being used by another process.
+   at System.IO.FileSystem.DeleteFile(String fullPath)
+   at System.IO.File.Delete(String path)
+   at EKT.FACT.Web.Controllers.MainController.UploadFile(IEnumerable`1 FormFile) in D:\ALINH\OPER\BAZ\FACTEKT\Fuentes\EKT.FACT\EKT.FACT.Web\Controllers\MainController.cs:line 108
+2019-11-08 08:46:28.983 -05:00 [Error] An unhandled exception has occurred while executing the request.
+System.IO.FileNotFoundException: Could not find file 'D:\ALINH\OPER\BAZ\FACTEKT\Fuentes\EKT.FACT\EKT.FACT.Web\wwwroot\files\favicon.ico'.
+File name: 'D:\ALINH\OPER\BAZ\FACTEKT\Fuentes\EKT.FACT\EKT.FACT.Web\wwwroot\files\favicon.ico'
+   at System.IO.FileStream.ValidateFileHandle(SafeFileHandle fileHandle)
+   at System.IO.FileStream.CreateFileOpenHandle(FileMode mode, FileShare share, FileOptions options)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   at System.IO.File.ReadAllBytes(String path)
+   at EKT.FACT.Web.Controllers.ReceiptController.Download(String filename) in D:\ALINH\OPER\BAZ\FACTEKT\Fuentes\EKT.FACT\EKT.FACT.Web\Controllers\ReceiptController.cs:line 172
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2019-11-08 08:46:29.161 -05:00 [Error] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: OnStarting cannot be set because the response has already started.
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ThrowResponseAlreadyStartedException(String value)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.OnStarting(Func`2 callback, Object state)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.Microsoft.AspNetCore.Http.Features.IHttpResponseFeature.OnStarting(Func`2 callback, Object state)
+   at Microsoft.AspNetCore.Http.Internal.DefaultHttpResponse.OnStarting(Func`2 callback, Object state)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.SessionEstablisher..ctor(HttpContext context, String cookieValue, SessionOptions options)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2019-11-08 08:46:29.163 -05:00 [Warning] The response has already started, the error page middleware will not be executed.
+2019-11-08 08:46:58.986 -05:00 [Error] An unhandled exception has occurred while executing the request.
+System.IO.FileNotFoundException: Could not find file 'D:\ALINH\OPER\BAZ\FACTEKT\Fuentes\EKT.FACT\EKT.FACT.Web\wwwroot\files\favicon.ico'.
+File name: 'D:\ALINH\OPER\BAZ\FACTEKT\Fuentes\EKT.FACT\EKT.FACT.Web\wwwroot\files\favicon.ico'
+   at System.IO.FileStream.ValidateFileHandle(SafeFileHandle fileHandle)
+   at System.IO.FileStream.CreateFileOpenHandle(FileMode mode, FileShare share, FileOptions options)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   at System.IO.File.ReadAllBytes(String path)
+   at EKT.FACT.Web.Controllers.ReceiptController.Download(String filename) in D:\ALINH\OPER\BAZ\FACTEKT\Fuentes\EKT.FACT\EKT.FACT.Web\Controllers\ReceiptController.cs:line 172
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2019-11-08 08:46:59.008 -05:00 [Error] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: StatusCode cannot be set because the response has already started.
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ThrowResponseAlreadyStartedException(String value)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.set_StatusCode(Int32 value)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.Microsoft.AspNetCore.Http.Features.IHttpResponseFeature.set_StatusCode(Int32 value)
+   at Microsoft.AspNetCore.Http.Internal.DefaultHttpResponse.set_StatusCode(Int32 value)
+   at Microsoft.AspNetCore.Builder.Internal.ApplicationBuilder.<>c.<Build>b__16_0(HttpContext context)
+   at Microsoft.AspNetCore.HttpOverrides.ForwardedHeadersMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2019-11-08 08:46:59.011 -05:00 [Warning] The response has already started, the error page middleware will not be executed.
