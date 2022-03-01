@@ -1,4 +1,4 @@
-﻿body {
+﻿/*body {
     background-color: #ffdd90;
     background-image: url('../imagen/imagen_login.png') !important;
     background-position: center center !important;
@@ -7,6 +7,46 @@
     background-size: cover !important;
     background-color: #66999;
 }
+*/
+
+body {
+    margin: 0;
+    padding: 0;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+    background-attachment: fixed !important;
+    background-size: cover !important;
+      
+}
+
+h2{
+    font-size:50px;
+    margin:20px auto;
+    text-align:center;
+    color:#666666;
+}
+
+.slider {
+    width:1380px;
+    height:820px;
+    background:url(../imagen/banner1.jpeg);
+    margin:20px auto;
+    animation:slide 6s infinite;
+}
+
+@keyframes slide {
+    25% {
+        background: url(../imagen/banner2.jpeg);
+    }
+    50% {
+        background: url(../imagen/banner3.jpeg);
+    }
+    75% {
+        background: url(../imagen/banner1.jpeg);
+    }
+   
+}
+ 
 
 /*
 * {
@@ -206,10 +246,7 @@ body {
 
 
 /************************/
-
-
-
-
+  
 .card {
     padding-top: 10px !important;
     padding-left: 10px !important;
