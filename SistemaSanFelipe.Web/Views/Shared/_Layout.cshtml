@@ -45,7 +45,7 @@
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
     @RenderSection("styles", false)
 </head>
-<body class="hold-transition sidebar-mini">
+<body class="hold-transition sidebar-mini" style="line-height: 0.5">
     <div class="wrapper">
         <!-- Navbar -->
  
@@ -95,7 +95,7 @@
             <a href="@Url.Action("Index", "Main")" class="brand-link">
                 <span class="brand-text font-weight-light">
                     <center>
-                        <img width="150px" height="70px" style="background-color:white" src="~/imagen/nuevo-logo-san-felipe-final-01.svg" />
+                        <img   src="~/imagen/logo.png" />
                     </center>
                 </span>
             </a>
@@ -130,7 +130,7 @@
                                 <a href="@Url.Action("BandejaComercial", "Main")" class="nav-link">
                                     <i class="fa fa-medkit" aria-hidden="true"></i>
                                     <p>
-                                        MEDICOS
+                                        Medicos
                                     </p>
                                 </a>
                                 <ul class="nav nav-treeview">
@@ -159,7 +159,7 @@
                                 <a href="@Url.Action("BandejaComercial", "Main")" class="nav-link">
                                     <i class="fa fa-users" aria-hidden="true"></i>
                                     <p>
-                                        CONSULTORIO CLIENTE
+                                       Consultorio Cliente
                                     </p>
                                 </a>
                                 <ul class="nav nav-treeview">
@@ -188,7 +188,7 @@
                                 <a href="@Url.Action("BandejaComercial", "Main")" class="nav-link">
                                     <i class="fa fa-wrench"></i>
                                     <p>
-                                        MANTENIMIENTO
+                                        Mantenimiento
                                     </p>
                                 </a>
                                 <ul class="nav nav-treeview">
@@ -259,17 +259,18 @@
 
             <!-- Main content -->
             <section class="content">
-                <br />
+            <br>
                 @RenderBody()
             </section>
             <!-- /.content -->
         </div>
         <!-- /.content-wrapper -->
         <footer class="main-footer">
-            <div class="float-right d-none d-sm-block">
+            <div style="float:right" >
                 Usted se Encuentra en el Ambiente de :<strong>Desarrollo </strong>
                 @*<b>Version</b> 3.0.0*@
             </div>
+            <br>
         </footer>
         <!-- Control Sidebar -->
         <aside class="control-sidebar control-sidebar-dark">
