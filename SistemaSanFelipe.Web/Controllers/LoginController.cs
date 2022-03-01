@@ -40,7 +40,7 @@ namespace SistemaSanFelipe.Web.Controllers
         }
 
         [HttpPost]
-        public JsonResult Validate(LoginRequest Request)
+        public IActionResult Validate(LoginRequest Request)
         {
             var Response = new GenericObjectResponse();
             try
@@ -49,6 +49,7 @@ namespace SistemaSanFelipe.Web.Controllers
                 var Result = SistemaSanFelipe.Utilities.Rest.RestClient.ProcessPostRequest(Url, Request);
 
                 Response.data = Result;
+                 
 
                 var ResultJson = JsonConvert.SerializeObject(Response.data);
                 var User = JsonConvert.DeserializeObject<GenericResponse>(ResultJson);
@@ -64,6 +65,7 @@ namespace SistemaSanFelipe.Web.Controllers
                         HttpContext.Session.SetString("TOKEN", User.data);
                         HttpContext.Session.SetInt32("PROFILE_ID", UserData.ProfileId);
                         HttpContext.Session.SetInt32("USUARIO_ID", UserData.IdUsuario);
+                        HttpContext.Session.SetString("SEXO_ID", UserData.Sexo);
 
                         break;
                     default:
@@ -76,7 +78,7 @@ namespace SistemaSanFelipe.Web.Controllers
                 Logger.LogWarning(ex, ex.Message);
                 Response.message = ex.Message;
             }
-            return Json(Response);
+            return  Json(Response);
         }
     }
 }

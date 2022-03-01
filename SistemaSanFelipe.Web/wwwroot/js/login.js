@@ -40,17 +40,15 @@ function fnLogin() {
      parametro.Login = $("#Login").val();
      parametro.Password = $("#Password").val();
     Post("Login/Validate", parametro).done(function (response) {
+        console.log(response);
         var result = response.data;
         console.log(result);
-        if (result.code == 0) {
-        
+        if (result.code == 0) {  
             window.location = fnBaseUrlWeb("Main/Index");
-            
-        } else {
-            $("#messageError").html(response.message);
-            $("#messageError").show();
+        } else if (result.code == 1) {
+                $("#messageError").html(response.message);
+                $("#messageError").show();
         }
-
-        
+     
     });
 }

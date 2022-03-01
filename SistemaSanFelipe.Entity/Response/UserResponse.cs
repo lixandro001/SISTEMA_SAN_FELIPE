@@ -17,5 +17,6 @@ namespace SistemaSanFelipe.Entity.Response
         public int ProfileId { get; set; }
         public int Status { get; set; }
         public int IdUsuario { get; set; }
+        public string Sexo { get; set; }
     }
 }

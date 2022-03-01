@@ -38,5 +38,29 @@ namespace SistemaSanFelipe.Web.Controllers
         {
             return View();
         }
+        public IActionResult GetUserData()
+        {
+            var Response = new GenericObjectResponse();
+            try
+            {
+                var token = HttpContext.Session.GetString("TOKEN");
+                var UrlUser = GeneralModel.UrlWebApi + "Usuario/GetUserDataByToken";
+
+                var ResultUser = SistemaSanFelipe.Utilities.Rest.RestClient.ProcessGetRequest(UrlUser, token);
+
+                var ResultUserJson = JsonConvert.SerializeObject(ResultUser);
+                var UserData = JsonConvert.DeserializeObject<UserResponse>(ResultUserJson);
+                Response.data = UserData;
+
+
+            }
+            catch (Exception ex)
+            {
+                Logger.LogWarning(ex, ex.Message);
+                Response.message = ex.Message;
+            }
+            return Ok(Response);
+        }
+
     }
 }

@@ -1,8 +1,10 @@
 ﻿
 @{
-    
-    var profileId = HttpContextAccessor.HttpContext.Session.GetInt32("PROFILE_ID");
 
+    var profileId = HttpContextAccessor.HttpContext.Session.GetInt32("PROFILE_ID");
+    var SEXOGENE = HttpContextAccessor.HttpContext.Session.GetString("SEXO_ID");
+
+      
 }
 @using SistemaSanFelipe.Entity
 
@@ -46,6 +48,7 @@
 <body class="hold-transition sidebar-mini">
     <div class="wrapper">
         <!-- Navbar -->
+ 
         <nav class="main-header navbar navbar-expand navbar-white navbar-light">
             <!-- Left navbar links -->
             <ul class="navbar-nav">
@@ -54,10 +57,25 @@
                 </li>
             </ul>
 
+            <ul>
+                @if (SEXOGENE == "M")
+                {
+                    <img width="80px" id="idfoto" alt="primeraImagen" src="~/imagen/avatarhombre.jpg" />
+
+                }
+                else if (SEXOGENE == "F")
+                {
+                    <img width="80px" id="idfoto2" alt="segundaImagen" src="~/imagen/avatarmujer.jpg" />
+
+                }
+            </ul>
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
                     <a class="nav-link">
-                        Bienvenido(a) :   <strong id="nombreUsuarioLayout"></strong><input id="perfil" type="">
+                        <p>
+                            Usted se Encuentra en el Ambiente de :<strong>Desarrollo </strong>
+                            Bienvenido(a) :<strong id="nombreUsuarioLayout"></strong><input id="perfil" type="hidden">
+                        </p>
                     </a>
                 </li>
                 <li class="nav-item">
@@ -67,88 +85,132 @@
                 </li>
             </ul>
         </nav>
+     
         <!-- /.navbar -->
         <!-- Main Sidebar Container -->
         <aside class="main-sidebar sidebar-dark-primary elevation-4">
             <!-- Brand Logo -->
             <a href="@Url.Action("Index", "Main")" class="brand-link">
-
-                <span class="brand-text font-weight-light">SISTEMA</span>
+                <span class="brand-text font-weight-light">
+                    <center>
+                        <img width="150px" height="70px" style="background-color:white" src="~/imagen/nuevo-logo-san-felipe-final-01.svg" />
+                    </center>
+                </span>
             </a>
             <!-- Sidebar -->
             <div class="sidebar">
                 <!-- Sidebar Menu -->
                 <nav class="mt-2">
+
+                    <div class="form-inline">
+                        <div style="color:white" class="input-group" data-widget="sidebar-search">
+                            <input class="form-control form-control-sidebar" type="search" placeholder="Search" aria-label="Search">
+                            <div class="input-group-append">
+                                <button class="btn btn-sidebar">
+                                    <i class="fas fa-search fa-fw"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
                     <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                         <!-- Add icons to the links using the .nav-icon class
-                        with font-awesome or any other icon font library -->
+                    with font-awesome or any other icon font library -->
 
-                        <li class="nav-header">OPCIONES</li>
+                     
                         @if (profileId == (int)Enums.Profile.ADMINISTRADOR)
                         {
-                            /*<li class="nav-item">
-                                <a href="@Url.Action("Cliente", "Main")" class="nav-link">
-                                    <i class="nav-icon far fa-file"></i>
-                                    <p>
-                                        Bandeja de Cliente
-                                    </p>
-                                </a>
-                            </li>
 
-                            <li class="nav-item">
-                                <a href="@Url.Action("FormularioCliente", "Main")" class="nav-link">
-                                    <i class="nav-icon far fa-file"></i>
-                                    <p>
-                                        Formulario credito Cliente
-                                    </p>
-                                </a>
-                            </li>
-
-                            <li class="nav-item">
-                                <a href="@Url.Action("FormularioPerfilFinanzas", "Main")" class="nav-link">
-                                    <i class="nav-icon far fa-file"></i>
-                                    <p>
-                                        Formulario Finanzas
-                                    </p>
-                                </a>
-                            </li>
-
-                            <li class="nav-item">
-                                <a href="@Url.Action("FormularioPerfilGerenteVentas", "Main")" class="nav-link">
-                                    <i class="nav-icon far fa-file"></i>
-                                    <p>
-                                        Formulario Gerente Ventas
-                                    </p>
-                                </a>
-                            </li>
-
-                            <li class="nav-item">
-                                <a href="@Url.Action("FormularioPerfilAnalistaCredito", "Main")" class="nav-link">
-                                    <i class="nav-icon far fa-file"></i>
-                                    <p>
-                                        Formulario Analista Credito
-                                    </p>
-                                </a>
-                            </li>*/
                         }
                         else if (profileId == (int)Enums.Profile.ASESORCOMERCIAL)
                         {
                             <li class="nav-item">
                                 <a href="@Url.Action("BandejaComercial", "Main")" class="nav-link">
-                                    <i class="nav-icon far fa-file"></i>
+                                    <i class="fa fa-medkit" aria-hidden="true"></i>
                                     <p>
-                                        Cliente Comercial
+                                        MEDICOS
                                     </p>
                                 </a>
+                                <ul class="nav nav-treeview">
+                                    <li class="nav-item">
+                                        <a href="pages/charts/chartjs.html" class="nav-link">
+                                            <i class="far fa-circle nav-icon"></i>
+                                            <p>opcion1</p>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="pages/charts/flot.html" class="nav-link">
+                                            <i class="far fa-circle nav-icon"></i>
+                                            <p>opcion2</p>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="pages/charts/inline.html" class="nav-link">
+                                            <i class="far fa-circle nav-icon"></i>
+                                            <p>opcion2</p>
+                                        </a>
+                                    </li>
+                                </ul>
                             </li>
-                            @*<li class="nav-item">
-                                    <a href="@Url.Action("FormularioCliente", "Main")" class="nav-link">
-                                        <i class="nav-icon far fa-file"></i>
-                                        <p>
-                                            Formulario credito Cliente Comercial
-                                        </p>
-                                    </a>
-                                </li>*@
+
+                            <li class="nav-item">
+                                <a href="@Url.Action("BandejaComercial", "Main")" class="nav-link">
+                                    <i class="fa fa-users" aria-hidden="true"></i>
+                                    <p>
+                                        CONSULTORIO CLIENTE
+                                    </p>
+                                </a>
+                                <ul class="nav nav-treeview">
+                                    <li class="nav-item">
+                                        <a href="pages/charts/chartjs.html" class="nav-link">
+                                            <i class="far fa-circle nav-icon"></i>
+                                            <p>opcion1</p>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="pages/charts/flot.html" class="nav-link">
+                                            <i class="far fa-circle nav-icon"></i>
+                                            <p>opcion2</p>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="pages/charts/inline.html" class="nav-link">
+                                            <i class="far fa-circle nav-icon"></i>
+                                            <p>opcion2</p>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li class="nav-item">
+                                <a href="@Url.Action("BandejaComercial", "Main")" class="nav-link">
+                                    <i class="fa fa-wrench"></i>
+                                    <p>
+                                        MANTENIMIENTO
+                                    </p>
+                                </a>
+                                <ul class="nav nav-treeview">
+                                    <li class="nav-item">
+                                        <a href="pages/charts/chartjs.html" class="nav-link">
+                                            <i class="far fa-circle nav-icon"></i>
+                                            <p>opcion1</p>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="pages/charts/flot.html" class="nav-link">
+                                            <i class="far fa-circle nav-icon"></i>
+                                            <p>opcion2</p>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="pages/charts/inline.html" class="nav-link">
+                                            <i class="far fa-circle nav-icon"></i>
+                                            <p>opcion2</p>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+
                         }
                         else if (profileId == (int)Enums.Profile.ANALISTACREDITO)
                         {
@@ -183,29 +245,7 @@
                                 </a>
                             </li>
                         }
-                        @*else if (profileId == (int)Enums.Profile.FACTURADOR)
-                            {
-                                <li class="nav-item">
-                                    <a href="@Url.Action("TrayBilling", "Main")" class="nav-link">
-                                        <i class="nav-icon far fa-file"></i>
-                                        <p>
-                                            Bandeja Facturador
-                                        </p>
-                                    </a>
-                                </li>
-                            }
-                            else if (profileId == (int)Enums.Profile.GESTOR)
-                            {
-                                <li class="nav-item">
-                                    <a href="@Url.Action("TrayManager", "Main")" class="nav-link">
-                                        <i class="nav-icon far fa-file"></i>
-                                        <p>
-                                            Bandeja de Gestor
-                                        </p>
-                                    </a>
-                                </li>
 
-                            }*@
                     </ul>
                 </nav>
                 <!-- /.sidebar-menu -->
@@ -259,10 +299,16 @@
                 var result = response.data;
                 console.log(result);
                 if (response.code == 0) {
-                    var nombre = result.Fullname;
-                    var perfil = result.ProfileId;
+                    var nombre = result.fullname;
+                    var perfil = result.profileId;
+                    var sexogeneral = result.sexo;
+
+                    console.log(nombre);
+                    console.log(perfil);
+
                     $("#nombreUsuarioLayout").text(nombre);
                     $("#perfil").val(perfil);
+        
                 }
             });
 

@@ -48,6 +48,7 @@ namespace SistemaSanFelipe.Data
                     Entity.ProfileId = (int)Dr["IdPerfil"];
                     Entity.Status = Convert.ToInt32(Dr["Estado"]);
                     Entity.IdUsuario = (int)Dr["IdUsuario"];
+                    Entity.Sexo = (string)Dr["sexo"]; ;
 
                     break;
                 }
