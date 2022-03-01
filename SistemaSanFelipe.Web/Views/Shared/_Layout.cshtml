@@ -57,24 +57,26 @@
                 </li>
             </ul>
 
-            <ul>
-                @if (SEXOGENE == "M")
-                {
-                    <img width="80px" id="idfoto" alt="primeraImagen" src="~/imagen/avatarhombre.jpg" />
-
-                }
-                else if (SEXOGENE == "F")
-                {
-                    <img width="80px" id="idfoto2" alt="segundaImagen" src="~/imagen/avatarmujer.jpg" />
-
-                }
-            </ul>
+             
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
                     <a class="nav-link">
                         <p>
-                            Usted se Encuentra en el Ambiente de :<strong>Desarrollo </strong>
+
                             Bienvenido(a) :<strong id="nombreUsuarioLayout"></strong><input id="perfil" type="hidden">
+
+
+                            @if (SEXOGENE == "M")
+                            {
+                                <img width="50PX" height="40PX" id="idfoto" alt="primeraImagen" src="~/imagen/avatarhombre.jpg" />
+
+                            }
+                            else if (SEXOGENE == "F")
+                            {
+                                <img width="50PX" height="40PX" id="idfoto2" alt="segundaImagen" src="~/imagen/avatarmujer.jpg" />
+
+                            }
+
                         </p>
                     </a>
                 </li>
@@ -265,7 +267,8 @@
         <!-- /.content-wrapper -->
         <footer class="main-footer">
             <div class="float-right d-none d-sm-block">
-                <b>Version</b> 3.0.0
+                Usted se Encuentra en el Ambiente de :<strong>Desarrollo </strong>
+                @*<b>Version</b> 3.0.0*@
             </div>
         </footer>
         <!-- Control Sidebar -->
