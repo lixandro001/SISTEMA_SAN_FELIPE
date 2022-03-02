@@ -10,39 +10,70 @@
 */
 
 body {
-    margin: 0;
+    /*  margin: 0;
     padding: 0;
     background-position: center center !important;
     background-repeat: no-repeat !important;
     background-attachment: fixed !important;
-    background-size: cover !important;
-      
+    background-size: cover !important;*/
+    
+    margin: 0;
+    padding: 0;
+    display: block;
+    margin: auto;
+    /*    max-width:1200px;
+    min-width:700px;*/
 }
 
 h2{
-    font-size:50px;
-    margin:20px auto;
+    font-size:30px;
+    margin:0px auto;
     text-align:center;
     color:#666666;
 }
 
 .slider {
-    width:1380px;
-    height:820px;
-    background:url(../imagen/banner1.jpeg);
-    margin:20px auto;
-    animation:slide 6s infinite;
+    width: 1600px;
+    height: 800px;
+    background-image: url(../imagen/imagen_login.png);
+    margin: 0px auto;
+    animation: slide 6s infinite;
+    background-repeat: no-repeat;
+    background-position: 0px;
+
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+     
+    scroll-snap-type: mandatory;
 }
 
 @keyframes slide {
     25% {
         background: url(../imagen/banner2.jpeg);
+        background-repeat: no-repeat;
+        display: flex;
+        overflow-x: auto;
+        width: 1600px;
+        height: 800px;
     }
     50% {
         background: url(../imagen/banner3.jpeg);
+        background-repeat: no-repeat;
+        display: flex;
+        overflow-x: auto;
+        width: 1600px;
+        height: 800px;
     }
     75% {
         background: url(../imagen/banner1.jpeg);
+        background-repeat: no-repeat;
+        display: flex;
+        overflow-x: auto;
+        width: 1600px;
+        height: 800px;
     }
    
 }

@@ -95,31 +95,39 @@
             <a href="@Url.Action("Index", "Main")" class="brand-link">
                 <span class="brand-text font-weight-light">
                     <center>
-                        <img   src="~/imagen/logo.png" />
+                        <img width="64%" src="~/imagen/logo.png" />
                     </center>
                 </span>
             </a>
             <!-- Sidebar -->
             <div class="sidebar">
-                <!-- Sidebar Menu -->
-                <nav class="mt-2">
 
-                    <div class="form-inline">
-                        <div style="color:black" class="input-group" data-widget="sidebar-search">
-                            <input style="background-color:white" class="form-control" type="search" placeholder="Buscar" aria-label="Search">
-                            <div style="background-color:white" class="input-group-append">
-                                <button class="btn">
-                                    <i class="fas fa-search fa-fw"></i>
-                                </button>
-                            </div>
+
+                <!-- SidebarSearch Form -->
+            
+
+                <div class="form-inline user-panel  d-flex info">
+                    <div style="color:black" class="input-group d-flex info" data-widget="sidebar-search">
+                        <input style="background-color:white" class="form-control" type="search" placeholder="Buscar" aria-label="Search">
+                        <div style="background-color:white" class="input-group-append">
+                            <button class="btn  d-flex info">
+                                <center>
+                                <i class="fas fa-search fa-fw" ></i>
+                                </center>
+                                    </button>
                         </div>
                     </div>
+                </div>
+
+                <nav class="mt-4">
+
                     <br>
+
                     <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                         <!-- Add icons to the links using the .nav-icon class
-                    with font-awesome or any other icon font library -->
+            with font-awesome or any other icon font library -->
 
-                     
+
                         @if (profileId == (int)Enums.Profile.ADMINISTRADOR)
                         {
 
@@ -159,7 +167,7 @@
                                 <a href="@Url.Action("BandejaComercial", "Main")" class="nav-link">
                                     <i class="fa fa-users" aria-hidden="true"></i>
                                     <p>
-                                       Consultorio Cliente
+                                        Consultorio Cliente
                                     </p>
                                 </a>
                                 <ul class="nav nav-treeview">
