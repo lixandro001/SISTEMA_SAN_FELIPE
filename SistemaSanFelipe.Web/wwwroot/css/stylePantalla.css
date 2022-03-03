@@ -33,11 +33,11 @@
 h2 {
     text-align: center;
     font-size: 2rem;
-    padding-top: 10px;
+    padding-top: 1px;
 }
 
 .slider-frame {
-    width: 1380px;
+    width: 1900px;
     height: auto;
     margin: 0px auto 0;
     overflow: hidden;
