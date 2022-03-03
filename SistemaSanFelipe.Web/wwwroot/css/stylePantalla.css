@@ -33,11 +33,11 @@ h2{
 }
 
 .slider {
-    width: 100%;
-    height: 100%;
+    width: 2000px;
+    height: 850px;
     background-image: url(../imagen/imagen_login.png);
     margin: 0px auto;
-    animation: slide 15s infinite;
+    animation: slide 10s infinite;
     background-repeat: no-repeat;
     background-position: 0px;
     display: flex;
@@ -54,33 +54,33 @@ h2{
         background-repeat: no-repeat;
         display: flex;
         overflow-x: auto;
-        width: 100%;
-        height: 100%;
+        width: 2000px;
+        height: 850px;
     }
     50% {
-        background: url(../imagen/banner3.jpeg);
+        background-image: url(../imagen/banner1.jpeg);
         background-repeat: no-repeat;
         display: flex;
         overflow-x: auto;
-        width: 100%;
-        height: 100%;
+        width: 2000px;
+        height: 850px;
     }
     75% {
-        background: url(../imagen/banner1.jpeg);
+        background-image: url(../imagen/banner2.jpeg);
         background-repeat: no-repeat;
         display: flex;
         overflow-x: auto;
-        width: 100%;
-        height: 100%;
+        width: 2000px;
+        height: 850px;
     }
-    100% {
-        background: url(../imagen/banner1.jpeg);
+  /*  100% {
+        background-image: url(../imagen/banner3.jpeg);
         background-repeat: no-repeat;
         display: flex;
         overflow-x: auto;
-        width: 100%;
-        height: 100%;
-    }
+        width: 2000px;
+        height: 850px;
+    }*/
    
 }
  
