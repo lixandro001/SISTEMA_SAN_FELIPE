@@ -390,14 +390,14 @@ body {
 
 
 /************************/
-  
+
 .card {
     padding-top: 10px !important;
-    padding-left: 10px !important;
-    margin-left: 10px !important;
+    padding-left: 15px !important;
+    margin-left: 15px !important;
     position: relative !important;
     float: left !important;
-    width: 45% !important;
+    width: 100% !important;
     border: steelblue solid 1px !important;
     height: auto !important;
 }
