@@ -24,6 +24,26 @@
     /*    max-width:1200px;
     min-width:700px;}*/
 
+.contenedor {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+
+.texto-encima {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.centrado {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
 * {
     margin: 0;
     padding: 0;

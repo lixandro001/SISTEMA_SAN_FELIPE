@@ -3,90 +3,104 @@
 }
 
 <body>
-      
+
     <div class="slider-frame">
-        <ul>
-            <li><img src="~/imagen/slider1.jpg" /></li>
-            <li><img src="~/imagen/slider2.jpg" /></li>
-            <li><img src="~/imagen/slider3.jpg" /></li>
-            <li><img src="~/imagen/slider4.jpg" /></li>
-        </ul>
+         
+            @*<li><img src="~/imagen/slider1.jpg" /></li>
+                <li><img src="~/imagen/slider2.jpg" /></li>
+                <li><img src="~/imagen/slider3.jpg" /></li>
+                <li><img src="~/imagen/slider4.jpg" /></li>*@
+
+        <div class="contenedor">
+            <ul>
+                <li><img src="~/imagen/slider1.jpg" /></li>
+                <li><img src="~/imagen/slider2.jpg" /></li>
+                <li><img src="~/imagen/slider3.jpg" /></li>
+                <li><img src="~/imagen/slider4.jpg" /></li>
+            </ul>
+                @*<div class="texto-encima">Texto</div>*@
+                <div class="centrado">
+                    <div class="login-box slider">
+                      
+
+                        <center class="col clearfix">
+                            <div class="row">
+                                 
+                                    @*<div class="card" style="filter:opacity(0)">
+                                    .........................................................
+                                </div><div class="card" style="filter:opacity(0)">
+                                    .........................................................
+                                </div><div class="card" style="filter:opacity(0)">
+                                    .........................................................
+                                </div><div class="card" style="filter:opacity(0)">
+                                    .........................................................
+                                </div><div class="card" style="filter:opacity(0)">
+                                    .........................................................
+                                </div>*@
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <p style="color: #0043A5" class="login-box-msg"><strong>Iniciar Sesión</strong></p>
+                                            <p> Inicia sesión para acceder a la Historia Clínica Electronica (HCE)</p>
+                                            <form id="frmLogin" action="#" method="post">
+                                                <div class="input-group mb-3">
+                                                    <input id="Login" type="text" class="form-control" placeholder="DNI*" required>
+                                                    <div class="input-group-append">
+                                                        <div class="input-group-text">
+                                                            <span class="fas fa-envelope"></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="input-group mb-3">
+                                                    <input id="Password" type="password" class="form-control" placeholder="Contraseña*" required>
+                                                    <div class="input-group-append">
+                                                        <div class="input-group-text">
+                                                            <span class="fas fa-lock"></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <select class="form-control">
+                                                    <option>Seleccionar Ambiente </option>
+                                                    <option value="">Produccion </option>
+                                                    <option value=""> Pruebas QA </option>
+                                                    <option value=""> Desarrollo </option>
+                                                </select>
+
+                                                <div id="messageError" class="alert alert-danger" role="alert"></div>
+
+                                                ¿Tienes problemas para iniciar sesión? Te sugerimos-->
+
+
+                                                <p class="mb-0">
+                                                    <a href="@Url.Action("", "")" class="text-center"><strong>Recuperar tu contraseña</strong></a>
+                                                </p>
+
+                                                <br />
+                                                <div class="row">
+
+                                                    <div class="col-12">
+                                                        <button id="btnLogin" type="button" style="background-color:#82C534" class="btn btn-success  btn-block">Ingresar</button>
+                                                    </div>
+
+                                                </div>
+                                            </form>
+                                        </div>
+
+                                    </div>
+                                
+                            </div>
+                        </center>
+                    </div>
+
+                </div>
+        </div>
+
+    
     </div>
 
 
-    <!--<div class="login-box slider">
-        <div class="login-logo">
-            <br><br>
-        </div>-->
-        <!-- /.login-logo -->
-        <!--<center class="col clearfix">
-            <div class="row">
-                <div class="col-md-9">
-                    <div class="card" style="filter:opacity(0)">
-                        .........................................................
-                    </div><div class="card" style="filter:opacity(0)">
-                        .........................................................
-                    </div><div class="card" style="filter:opacity(0)">
-                        .........................................................
-                    </div><div class="card" style="filter:opacity(0)">
-                        .........................................................
-                    </div><div class="card" style="filter:opacity(0)">
-                        .........................................................
-                    </div>
-                    <div class="card">
-                        <div class="card-body">
-                            <p style="color: #0043A5" class="login-box-msg"><strong>Iniciar Sesión</strong></p>
-                            <p> Inicia sesión para acceder a la Historia Clínica Electronica (HCE)</p>
-                            <form id="frmLogin" action="#" method="post">
-                                <div class="input-group mb-3">
-                                    <input id="Login" type="text" class="form-control" placeholder="DNI*" required>
-                                    <div class="input-group-append">
-                                        <div class="input-group-text">
-                                            <span class="fas fa-envelope"></span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="input-group mb-3">
-                                    <input id="Password" type="password" class="form-control" placeholder="Contraseña*" required>
-                                    <div class="input-group-append">
-                                        <div class="input-group-text">
-                                            <span class="fas fa-lock"></span>
-                                        </div>
-                                    </div>
-                                </div>
 
-                                <select class="form-control">
-                                    <option>Seleccionar Ambiente </option>
-                                    <option value="">Produccion </option>
-                                    <option value=""> Pruebas QA </option>
-                                    <option value=""> Desarrollo </option>
-                                </select>
 
-                                <div id="messageError" class="alert alert-danger" role="alert"></div>
-
-                                ¿Tienes problemas para iniciar sesión? Te sugerimos-->
-
-                                <!-- /.col -->
-                                <!--<p class="mb-0">
-                                    <a href="@Url.Action("", "")" class="text-center"><strong>Recuperar tu contraseña</strong></a>
-                                </p>-->
-                                <!-- /.col -->
-                                <!--<br />
-                                <div class="row">-->
-                                    <!-- /.col -->
-                                    <!--<div class="col-12">
-                                        <button id="btnLogin" type="button" style="background-color:#82C534" class="btn btn-success  btn-block">Ingresar</button>
-                                    </div>-->
-                                    <!-- /.col -->
-                                <!--</div>
-                            </form>
-                        </div>-->
-                        <!-- /.login-card-body -->
-                    <!--</div>
-                </div>
-            </div>
-        </center>
-    </div>-->
 </body>
 
    
