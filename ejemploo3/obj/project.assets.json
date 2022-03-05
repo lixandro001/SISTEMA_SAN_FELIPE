@@ -8,25 +8,25 @@
     "net5.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Usuario\\.nuget\\packages\\": {},
+    "C:\\Users\\mvasquezo\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Usuario\\Desktop\\SistemaClinicaSanFelipe\\SistemaSanFelipe.Services\\ejemploo3\\ejemploo3.csproj",
+      "projectUniqueName": "D:\\ProyectosGIT\\SISTEMA_SAN_FELIPE\\ejemploo3\\ejemploo3.csproj",
       "projectName": "ejemploo3",
-      "projectPath": "C:\\Users\\Usuario\\Desktop\\SistemaClinicaSanFelipe\\SistemaSanFelipe.Services\\ejemploo3\\ejemploo3.csproj",
-      "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Usuario\\Desktop\\SistemaClinicaSanFelipe\\SistemaSanFelipe.Services\\ejemploo3\\obj\\",
+      "projectPath": "D:\\ProyectosGIT\\SISTEMA_SAN_FELIPE\\ejemploo3\\ejemploo3.csproj",
+      "packagesPath": "C:\\Users\\mvasquezo\\.nuget\\packages\\",
+      "outputPath": "D:\\ProyectosGIT\\SISTEMA_SAN_FELIPE\\ejemploo3\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\mvasquezo\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -70,7 +70,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.405\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
       }
     }
   }
