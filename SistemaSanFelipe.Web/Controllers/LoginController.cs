@@ -49,8 +49,7 @@ namespace SistemaSanFelipe.Web.Controllers
                 var Result = SistemaSanFelipe.Utilities.Rest.RestClient.ProcessPostRequest(Url, Request);
 
                 Response.data = Result;
-                 
-
+                  
                 var ResultJson = JsonConvert.SerializeObject(Response.data);
                 var User = JsonConvert.DeserializeObject<GenericResponse>(ResultJson);
 

@@ -1,0 +1,339 @@
+﻿@model  SistemaSanFelipe.Entity.Response.VentasReporteLista
+ 
+@{
+    Layout = null;
+    //var TotalVentas = ViewBag.model;
+    decimal valor1 = 0;
+    decimal valor2 = 0;
+    decimal valor3 = 0;
+    decimal valor4 = 0;
+    decimal valor5 = 0;
+    decimal valor6 = 0;
+    decimal valor7 = 0;
+    decimal valor8 = 0;
+    decimal valor9 = 0;
+    decimal valor10 = 0;
+}
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reporte De Salidas De Pollos</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+</head>
+
+<div class="card">
+    <div class="card-header">
+
+        <h3 class="card-title">Soluciones Gomez  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Guia de Venta / Resumen por Clientes</h3>
+        <label style="text-align:left">Rep :&nbsp; </label>
+        <div style="text-align: right">
+            <label>Pag: </label>&nbsp;
+            <label>Fecha: </label>&nbsp;
+            <label>Hora: </label>&nbsp;
+        </div>
+
+        <div>
+            <div style="text-align:center">
+                <label>Del :&nbsp; </label>   <label> al :&nbsp;</label>
+            </div>
+        </div>
+    </div>
+    <br /><br />
+
+    <div class="container">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Zona</th>
+                    <th>Cliente</th>
+                    <th>Nro Jabas</th>
+                    <th>Nro Aves</th>
+                    <th>Peso Bruto</th>
+                    <th>Tara</th>
+                    <th>Peso Neto</th>
+                    <th>Precio Unitario</th>
+                    <th>Importe</th>
+                    <th>N.Cargo</th>
+                    <th>N.Abono</th>
+                    <th>Neto.Cobrar</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var venta in Model.ListaVentaGuiaReporte)
+                {
+
+                    if (venta.nombreUbigeo == "CAÑETE")
+                    {
+                        <tr>
+                            <td style="background:#0094ff">
+                                @venta.nombreUbigeo
+                            </td>
+                            <td>
+                                @venta.nombreCliente
+                            </td>
+                            <td>
+                                @venta.JABAS
+                            </td>
+                            <td>
+                                @venta.AVES
+                            </td>
+                            <td>
+                                @venta.pesoBRUTO
+                            </td>
+                            <td>
+                                @venta.TARA
+                            </td>
+                            <td>
+                                @venta.PESONETOG
+                            </td>
+                            <td>
+                                @venta.UNITARIO
+                            </td>
+                            <td>
+                                @venta.IMPORTE
+                            </td>
+                            <td>
+                                @venta.nro_cargo
+                            </td>
+                            <td>
+                                @venta.nro_Abono
+                            </td>
+                            <td>
+                                @venta.porCobrar
+                            </td>
+                        </tr>
+                    }
+
+                }
+
+            </tbody>
+        </table>
+    </div>
+
+    <div class="container">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Zona</th>
+                    <th>total por zona</th>
+                    <th> Jabas por zona</th>
+                    <th> Aves por zona</th>
+                    <th> Bruto por zona</th>
+                    <th> Tara por zona</th>
+                    <th> Peso Neto </th>
+                    <th> Precio Unitario por zona</th>
+                    <th> Importe por zona</th>
+                    <th> N.Cargo por zona</th>
+                    <th> N.Abono por zona</th>
+                    <th> Neto.Cobrar por zona</th>
+                </tr>
+            </thead>
+            @foreach (var item in Model.ListaTotalVenta)
+            {
+                if (item.nombreUbigeo == "CAÑETE")
+                {
+                    <tbody>
+                        <tr>
+                            <td style="background:#0094ff">@item.nombreUbigeo </td>
+                            <td style="background:#0094ff" width="250px">total zona</td>
+                            <td style="background:#0094ff" width="120px">@item.totaljabas</td>
+                            <td style="background:#0094ff" width="120px">@item.totalaves</td>
+                            <td style="background:#0094ff" width="120px">@item.totalpesobruto</td>
+                            <td style="background:#0094ff" width="120px">@item.totaltara</td>
+                            <td style="background:#0094ff" width="120px">@item.totalpesoneto</td>
+                            <td style="background:#0094ff" width="120px"></td>
+                            <td style="background:#0094ff" width="120px">@item.totalimporte</td>
+                            <td style="background:#0094ff" width="120px">@item.totalnrocargo</td>
+                            <td style="background:#0094ff" width="120px">@item.totalnroabono</td>
+                            <td style="background:#0094ff" width="120px">@item.totalporcobrar</td>
+                        </tr>
+                    </tbody>
+                }
+            }
+        </table>
+    </div>
+
+    <br /><br /><br />
+
+    <div class="container">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Zona</th>
+                    <th>Cliente</th>
+                    <th>Nro Jabas</th>
+                    <th>Nro Aves</th>
+                    <th>Peso Bruto</th>
+                    <th>Tara</th>
+                    <th>Peso Neto</th>
+                    <th>Precio Unitario</th>
+                    <th>Importe</th>
+                    <th>N.Cargo</th>
+                    <th>N.Abono</th>
+                    <th>Neto.Cobrar</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var venta in Model.ListaVentaGuiaReporte)
+                {
+
+                    if (venta.nombreUbigeo == "CHINCHA")
+                    {
+                        <tr>
+                            <td style="background:#c6bcbc">
+                                @venta.nombreUbigeo
+                            </td>
+                            <td>
+                                @venta.nombreCliente
+                            </td>
+                            <td>
+                                @venta.JABAS
+                            </td>
+                            <td>
+                                @venta.AVES
+                            </td>
+                            <td>
+                                @venta.pesoBRUTO
+                            </td>
+                            <td>
+                                @venta.TARA
+                            </td>
+                            <td>
+                                @venta.PESONETOG
+                            </td>
+                            <td>
+                                @venta.UNITARIO
+                            </td>
+                            <td>
+                                @venta.IMPORTE
+                            </td>
+                            <td>
+                                @venta.nro_cargo
+                            </td>
+                            <td>
+                                @venta.nro_Abono
+                            </td>
+                            <td>
+                                @venta.porCobrar
+                            </td>
+                        </tr>
+                    }
+
+                }
+
+            </tbody>
+        </table>
+    </div>
+
+    <div class="container">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Zona</th>
+                    <th>total por zona</th>
+                    <th> Jabas por zona</th>
+                    <th> Aves por zona</th>
+                    <th> Bruto por zona</th>
+                    <th> Tara por zona</th>
+                    <th> Peso Neto </th>
+                    <th> Precio Unitario por zona</th>
+                    <th> Importe por zona</th>
+                    <th> N.Cargo por zona</th>
+                    <th> N.Abono por zona</th>
+                    <th> Neto.Cobrar por zona</th>
+                </tr>
+            </thead>
+            @foreach (var item in Model.ListaTotalVenta)
+            {
+                if (item.nombreUbigeo == "CHINCHA")
+                {
+                    <tbody>
+                        <tr>
+                            <td style="background:#c6bcbc">@item.nombreUbigeo </td>
+                            <td style="background:#c6bcbc" width="250px">total zona</td>
+                            <td style="background:#c6bcbc" width="120px">@item.totaljabas</td>
+                            <td style="background:#c6bcbc" width="120px">@item.totalaves</td>
+                            <td style="background:#c6bcbc" width="120px">@item.totalpesobruto</td>
+                            <td style="background:#c6bcbc" width="120px">@item.totaltara</td>
+                            <td style="background:#c6bcbc" width="120px">@item.totalpesoneto</td>
+                            <td style="background:#c6bcbc" width="120px"></td>
+                            <td style="background:#c6bcbc" width="120px">@item.totalimporte</td>
+                            <td style="background:#c6bcbc" width="120px">@item.totalnrocargo</td>
+                            <td style="background:#c6bcbc" width="120px">@item.totalnroabono</td>
+                            <td style="background:#c6bcbc" width="120px">@item.totalporcobrar</td>
+                        </tr>
+                    </tbody>
+ 
+                }
+            }
+        </table>
+    </div>
+
+    @*Total Final*@
+
+    @foreach (var item in Model.ListaTotalVenta)
+    {
+        valor1 += @item.totaljabas;
+        valor2 += @item.totalaves;
+        valor3 += @item.totalpesobruto;
+        valor4 += @item.totaltara;
+        valor5 += @item.totalpesoneto;
+        valor6 += @item.totalimporte;
+        valor7 += @item.totalnrocargo;
+        valor8 += @item.totalnroabono;
+        valor9 += @item.totalporcobrar;
+    }
+
+    <div class="container">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>total</th>
+                    <th>total Jabas</th>
+                    <th>total Aves</th>
+                    <th>total Bruto </th>
+                    <th>total Tara </th>
+                    <th> total Peso Neto </th>
+                    <th> total Precio Unitario </th>
+                    <th>total Importe </th>
+                    <th>total N.Cargo </th>
+                    <th>total N.Abono </th>
+                    <th>total Neto.Cobrar</th>
+                </tr>
+            </thead>
+           
+           <tbody>             
+            <tr>
+                @*<td><strong>@Model.ListarCostos.Sum(x => x.MaBRID)</strong></td>*@
+                <td width="250px"></td>
+                <td width="250px"></td>
+                <td width="120px">@valor1</td>
+                <td width="120px">@valor2</td>
+                <td width="120px">@valor3</td>
+                <td width="120px">@valor4</td>
+                <td width="120px">@valor5</td>
+                <td width="120px"></td>
+                <td width="120px">@valor6</td>
+                <td width="120px">@valor7</td>
+                <td width="120px">@valor8</td>
+                <td width="120px">@valor9</td>
+            </tr>
+        </tbody>
+
+    
+        </table>
+    </div>
+
+
+
+
+</div>
+
+    <!-- /.card-body -->
+ 
+<!-- /.card -->
+@*<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>*@

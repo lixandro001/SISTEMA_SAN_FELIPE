@@ -16,6 +16,7 @@
     <PackageReference Include="Microsoft.NETCore.App" Version="2.2.8" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration" Version="3.0.0" />
     <PackageReference Include="NLog" Version="4.7.14" />
+    <PackageReference Include="Rotativa.AspNetCore" Version="1.2.0-beta" />
     <PackageReference Include="Serilog.AspNetCore" Version="5.0.0" />
     <PackageReference Include="Serilog.Sinks.RollingFile" Version="3.3.0" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
@@ -23,8 +24,15 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\SistemaSanFelipe.Business\SistemaSanFelipe.Business.csproj" />
+    <ProjectReference Include="..\SistemaSanFelipe.Data\SistemaSanFelipe.Data.csproj" />
     <ProjectReference Include="..\SistemaSanFelipe.Entity\SistemaSanFelipe.Entity.csproj" />
+    <ProjectReference Include="..\SistemaSanFelipe.Services\SistemaSanFelipe.Services.csproj" />
     <ProjectReference Include="..\SistemaSanFelipe.Utilities\SistemaSanFelipe.Utilities.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Rotativa\" />
   </ItemGroup>
 
 </Project>

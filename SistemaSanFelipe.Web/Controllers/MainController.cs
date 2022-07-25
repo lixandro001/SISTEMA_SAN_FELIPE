@@ -20,7 +20,6 @@ namespace SistemaSanFelipe.Web.Controllers
         private readonly IConfiguration Configuration;
         private readonly ILogger Logger;
         private readonly IHostingEnvironment HostingEnvironment;
-
         public MainController(IConfiguration IConfiguration, ILoggerFactory LoggerFactory, IHostingEnvironment IHostingEnvironment)
         {
             HostingEnvironment = IHostingEnvironment;
@@ -28,16 +27,24 @@ namespace SistemaSanFelipe.Web.Controllers
             Logger = LoggerFactory.CreateLogger<MainController>();
             GeneralModel.UrlWebApi = Configuration["Urls:UrlWebApi"];
         }
-
         public IActionResult Index()
         {
             return View();
         }
-
         public IActionResult BandejaComercial()
         {
             return View();
         }
+        public IActionResult BandejaVentas()
+        {
+            return View();
+        }
+
+        public IActionResult FichaVenta()
+        {
+            return View();
+        }
+         
         public IActionResult GetUserData()
         {
             var Response = new GenericObjectResponse();
@@ -45,14 +52,10 @@ namespace SistemaSanFelipe.Web.Controllers
             {
                 var token = HttpContext.Session.GetString("TOKEN");
                 var UrlUser = GeneralModel.UrlWebApi + "Usuario/GetUserDataByToken";
-
                 var ResultUser = SistemaSanFelipe.Utilities.Rest.RestClient.ProcessGetRequest(UrlUser, token);
-
                 var ResultUserJson = JsonConvert.SerializeObject(ResultUser);
                 var UserData = JsonConvert.DeserializeObject<UserResponse>(ResultUserJson);
                 Response.data = UserData;
-
-
             }
             catch (Exception ex)
             {

@@ -2,29 +2,28 @@
     Layout = "~/Views/Shared/_LayoutLogin.cshtml"; 
 }
 
+
 <body>
-
     <div class="slider-frame">
- 
-
-        <div class="contenedor">
+        <div class="contenedor"> 
             <ul>
-                <li><img src="~/imagen/banner1.jpeg" /></li>
-                <li><img src="~/imagen/banner2.jpeg" /></li>   
-                <li><img src="~/imagen/banner3.jpeg" /></li>
-                <li><img src="~/imagen/imagenprueba1.jpeg" /></li>
-            </ul>
-                @*<div class="texto-encima">Texto</div>*@
+                <li><img  src="~/imagen/pollo1.jpg" /></li>
+                <li><img  src="~/imagen/avicola.jpg" /></li>
+                <li><img  src="~/imagen/imagenpasto1.jpeg" /></li>
+                <li><img  src="~/imagen/paisaje1.jpg" /></li>
+                
+
+            </ul> 
                 <div class="centrado">
-                    <div class="login-box slider">
-                      
+                    <div class="login-box slider">     
                         <center class="col clearfix">
                             <div class="row">
  
                                     <div class="card">
                                         <div class="card-body">
+                                            <h2 style="color: #0043A5" class="login-box-msg"><strong>SOLUCIONES GOMEZ</strong></h2>
                                             <p style="color: #0043A5" class="login-box-msg"><strong>Iniciar Sesión</strong></p>
-                                            <p> Inicia sesión para acceder a la Historia Clínica Electronica (HCE)</p>
+                                            <p> Inicia sesión para acceder al sistema de ventas</p>
                                             <form id="frmLogin" action="#" method="post">
                                                 <div class="input-group mb-3">
                                                     <input id="Login" type="text" class="form-control" placeholder="DNI*" required>
@@ -43,17 +42,12 @@
                                                     </div>
                                                 </div>
 
-                                                <select class="form-control">
-                                                    <option>Seleccionar Ambiente </option>
-                                                    <option value="">Produccion </option>
-                                                    <option value=""> Pruebas QA </option>
-                                                    <option value=""> Desarrollo </option>
-                                                </select>
+
 
                                                 <div id="messageError" class="alert alert-danger" role="alert"></div>
 
-                                                ¿Tienes problemas para iniciar sesión? Te sugerimos 
- 
+                                                ¿Tienes problemas para iniciar sesión? Te sugerimos
+
                                                 <p class="mb-0">
                                                     <a href="@Url.Action("", "")" class="text-center"><strong>Recuperar tu contraseña</strong></a>
                                                 </p>

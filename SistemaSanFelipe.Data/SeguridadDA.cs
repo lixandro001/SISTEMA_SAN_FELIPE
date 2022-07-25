@@ -45,8 +45,6 @@ namespace SistemaSanFelipe.Data
                     Entity.Password = Convert.ToString(Dr["Password"]);
                     Entity.NombreCompleto = Convert.ToString(Dr["NombreCompleto"]);
                     Entity.TipoDocumento = Convert.ToInt32(Dr["TipoDocumento"]);
-                    Entity.DocumentoIdentidad = Convert.ToString(Dr["DocumentoIdentidad"]);
-                    Entity.Email = Convert.ToString(Dr["Email"]);
                     Entity.Estado = Convert.ToBoolean(Dr["Estado"]);
                     Entity.Locked = (bool)Dr["Locked"];
                     break;

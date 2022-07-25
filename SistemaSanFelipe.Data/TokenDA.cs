@@ -42,14 +42,11 @@ namespace SistemaSanFelipe.Data
                     Entity.UserCode = Convert.ToString(Dr["UsuarioCodeGuid"]);
                     Entity.Login = (string)Dr["Login"];
                     Entity.Fullname = (string)Dr["NombreCompleto"];
-                    Entity.DocumentType = Convert.ToInt32(Dr["TipoDocumento"]);
-                    Entity.DocumentNumber = (string)Dr["DocumentoIdentidad"];
-                    Entity.Email = (string)Dr["Email"];
+                    Entity.DocumentType = Convert.ToInt32(Dr["TipoDocumento"]);      
                     Entity.ProfileId = (int)Dr["IdPerfil"];
                     Entity.Status = Convert.ToInt32(Dr["Estado"]);
                     Entity.IdUsuario = (int)Dr["IdUsuario"];
                     Entity.Sexo = (string)Dr["sexo"]; ;
-
                     break;
                 }
                 Dr.Close();
