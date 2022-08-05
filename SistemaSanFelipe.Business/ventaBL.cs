@@ -42,14 +42,14 @@ namespace SistemaSanFelipe.Business
             return objVenta.GuardarGuiaVenta(datos);
         }
 
-        public List<ListadoPollosResponse> ObtenerListadoPollos()
+        public List<ListadoPollosResponse> ObtenerListadoPollos(DateTime StartDate, DateTime EndDate)
         {
-            return objVenta.ObtenerListadoPollos();
+            return objVenta.ObtenerListadoPollos(StartDate, EndDate);
         }
 
-        public VentasReporteLista GetVentasReporteLista()
+        public VentasReporteLista GetVentasReporteLista(DateTime fechaIniDate, DateTime fechaFinDate)
         {
-            return objVenta.GetVentasReporteLista();
+            return objVenta.GetVentasReporteLista(fechaIniDate, fechaFinDate);
         }
 
     }

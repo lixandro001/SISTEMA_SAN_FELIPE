@@ -10,7 +10,10 @@ $(function (e) {
     var txtTARA = 0.0;
     var txtPESONETOG = 0.0;
     var txtUNITARIO = 0.0;
-    var txtIMPORTE = 0.0; 
+    var txtIMPORTE = 0.0;
+    var nroaves = 0.0;
+    var peso = 0.0;
+
     $("#txtCobrado").val('0.00');
     $("#txtCancelacion").val('00/00/0000');
     $("#txtSN").val('S/N');
@@ -30,32 +33,39 @@ $(function (e) {
     $("#txtUNITARIO").change(function () {
         txtUNITARIO = $("#txtUNITARIO").val();
         txtPESONETOG = $("#txtPESONETOG").val();
-        $("#txtIMPORTE").val(parseFloat(txtPESONETOG) * parseFloat(txtUNITARIO));        
-        console.log(txtIMPORTE);
+        $("#txtIMPORTE").val(parseFloat(txtPESONETOG) * parseFloat(txtUNITARIO));             
         $("#txtTotal").val((parseFloat(txtPESONETOG) * parseFloat(txtUNITARIO)));
         $("#txtporCobrar").val((parseFloat(txtPESONETOG) * parseFloat(txtUNITARIO)));
+        $("#txtAfecto").val( Number.parseFloat( ($("#txtTotal").val()) / 1.18).toFixed(3) );
+        $("#txtIGV").val( Number.parseFloat( ($("#txtAfecto").val()) * 0.18).toFixed(3)  );
 
-        $("#txtAfecto").val(parseFloat(parseFloat($("#txtTotal").val()) / 1.18));
-        $("#txtIGV").val(parseFloat(parseFloat($("#txtAfecto").val()) * 0.18));
     });
     $("#txtIMPORTE").change(function () {
-        $("#txtIMPORTE").val(parseFloat(txtPESONETOG) * parseFloat(txtUNITARIO));
-        console.log(txtIMPORTE);
+        $("#txtIMPORTE").val(parseFloat(txtPESONETOG) * parseFloat(txtUNITARIO));     
         $("#txtTotal").val((parseFloat(txtPESONETOG) * parseFloat(txtUNITARIO)));
         $("#txtporCobrar").val((parseFloat(txtPESONETOG) * parseFloat(txtUNITARIO)));
- 
-        $("#txtAfecto").val(parseFloat(parseFloat($("#txtTotal").val()) / 1.18));
-        $("#txtIGV").val(parseFloat(parseFloat($("#txtAfecto").val()) * 0.18));
+        $("#txtAfecto").val( Number.parseFloat( ($("#txtTotal").val()) / 1.18).toFixed(3) );
+        $("#txtIGV").val( Number.parseFloat( ($("#txtAfecto").val()) * 0.18).toFixed(3)  );
     });
+
     $("#txtUNITARIO").change(function () {
-        var nroaves = $("#txtAVES").val();
-        var peso = txtPESONETOG;
-        $("#txtpesoPromedioDato").val(parseFloat(parseFloat(peso) / parseFloat( nroaves)));
+        nroaves = $("#txtAVES").val();
+        peso = txtPESONETOG;
+        console.log(nroaves);
+        console.log(peso);
+        var resultado = parseFloat(peso) / parseFloat(nroaves);
+        console.log( Number.parseFloat(resultado).toFixed(4) );
+        $("#txtpesoPromedioDato").val( Number.parseFloat(resultado).toFixed(3)  );
     })
     $("#txtIMPORTE").change(function () {
-        var nroaves = $("#txtAVES").val();
-        var peso = txtPESONETOG;
-        $("#txtpesoPromedioDato").val(parseFloat(parseFloat(peso) / parseFloat(nroaves)));
+        nroaves = $("#txtAVES").val();
+        peso = txtPESONETOG;
+
+        console.log(nroaves);
+        console.log(peso);
+
+        $("#txtpesoPromedioDato").val(Number.parseFloat(resultado).toFixed(3) );
+ 
     })
     $("#tabDescTablaCliente").DataTable({
         "paging": true,
@@ -133,10 +143,10 @@ $(function (e) {
 });
 
 function fnViewRegister(CodeRegister) {
-    console.log(CodeRegister);    
+   
     Get("Mantenimiento/GetClienteId?idCliente=" + CodeRegister).done(function (response) {
         $('body').loading('stop');
-        console.log(response);
+       
         if (response.data != null) {
             var data = response.data;            
             $("#txtRUCCobranza").val(zfill(data.idcliente, 11)    );
@@ -152,10 +162,10 @@ function fnViewRegister(CodeRegister) {
 
 function fnObtenerClientes() {  
     Get("Mantenimiento/GetBandejaCliente").done(function (response) {
-        console.log(response);
+        
         if (response.data != null) {
             fnClearTable($('#tabDescTablaCliente').dataTable());
-            console.log(response.data);
+           
             if (response.data.length > 0) {
                 $('#tabDescTablaCliente').dataTable().fnAddData(response.data);
             } else {
@@ -168,7 +178,7 @@ function fnObtenerClientes() {
 
 function fnLoadCategoriaCliente() {
     Get("SisInternoSelect/GetCategoriaCliente").done(function (response) {
-        console.log(response.data.Data);
+        
         var Response = response.data.Data;
         if (Response != null) {
             var select = document.getElementById('cboMotivo');
@@ -185,10 +195,10 @@ function fnLoadCategoriaCliente() {
 function fnObtenerNroGuiaVentaNuevo() {
     Get("Mantenimiento/GetNumeroGuiaVenta").done(function (response) {
         $('body').loading('stop');
-        console.log(response);
+         
         if (response.data != null) {
             var data = response.data ;
-            console.log(zfill(data.nroGuia, 6)); 
+            
             $("#txtNroGuiaSalidaNumero2").val(zfill(data.nroGuia, 6));
         }
         else {

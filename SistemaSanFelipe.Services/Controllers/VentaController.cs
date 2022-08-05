@@ -7,6 +7,7 @@ using SistemaSanFelipe.Entity.Request;
 using SistemaSanFelipe.Entity.Response;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -100,15 +101,18 @@ namespace SistemaSanFelipe.Services.Controllers
         }
 
         [HttpGet]
-        [Route("GetVentasReporteLista")]
-        public IActionResult GetVentasReporteLista()
+        [Route("GetVentasReporteLista/{FechaInicio?}/{FechaFinal?}")] 
+        public IActionResult GetVentasReporteLista(string FechaInicio, string FechaFinal)
         {
             try
             {
                 //Obtener el Token
                 string secretTokenName = "Auth-Token";
                 var tokenCode = HttpContext.Request.Headers[secretTokenName].ToString();
-                var Result = objventaBL.GetVentasReporteLista();
+                DateTime fechaIniDate = DateTime.ParseExact(FechaInicio, "yyyy-MM-dd", CultureInfo.InvariantCulture);
+                DateTime fechaFinDate = DateTime.ParseExact(FechaFinal, "yyyy-MM-dd", CultureInfo.InvariantCulture); 
+
+                var Result = objventaBL.GetVentasReporteLista(fechaIniDate, fechaFinDate);
                 //response.code = (int)Enums.eCodeError.OK;
                 //response.Data = data;
                 return Ok(Result);
@@ -121,15 +125,17 @@ namespace SistemaSanFelipe.Services.Controllers
         } 
 
         [HttpGet]
-        [Route("ObtenerListadoPollos")]
-        public IActionResult ObtenerListadoPollos()
+        [Route("ObtenerListadoPollos/{StartDate?}/{EndDate?}")]
+        public IActionResult ObtenerListadoPollos(string StartDate, string EndDate)
         {
             try
             {
                 //Obtener el Token
                 string secretTokenName = "Auth-Token";
                 var tokenCode = HttpContext.Request.Headers[secretTokenName].ToString();
-                var Result = objventaBL.ObtenerListadoPollos();
+                DateTime fechaIniDate = DateTime.ParseExact(StartDate, "yyyy-MM-dd", CultureInfo.InvariantCulture);
+                DateTime fechaFinDate = DateTime.ParseExact(EndDate, "yyyy-MM-dd", CultureInfo.InvariantCulture) ;
+                var Result = objventaBL.ObtenerListadoPollos(fechaIniDate, fechaFinDate);
                 //response.code = (int)Enums.eCodeError.OK;
                 //response.Data = data;
                 return Ok(Result);

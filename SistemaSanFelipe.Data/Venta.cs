@@ -110,7 +110,7 @@ namespace SistemaSanFelipe.Data
         }
 
 
-        public VentasReporteLista GetVentasReporteLista()
+        public VentasReporteLista GetVentasReporteLista(DateTime fechaIniDate, DateTime fechaFinDate)
         {
           
             using (var Ado = new SQLServer(ConStr))
@@ -119,7 +119,16 @@ namespace SistemaSanFelipe.Data
                 {
                     VentasReporteLista entidad = new VentasReporteLista();
                     List<VentasReporteListaResponse> List = new List<VentasReporteListaResponse>();
-                    var Dr = Ado.ExecDataReaderProc("usp_listado_Reporte_venta_pollos", null);
+
+                    var Parameters = new SqlParameter[]
+                       {
+
+                        new SqlParameter{ ParameterName = "@FechaInicial", SqlDbType = SqlDbType.DateTime, SqlValue = fechaIniDate},
+                        new SqlParameter{ ParameterName = "@FechaFinal", SqlDbType = SqlDbType.DateTime, SqlValue= fechaFinDate },
+
+                      };
+
+                    var Dr = Ado.ExecDataReaderProc("usp_listado_Reporte_venta_pollos", Parameters);
                     {
                         if (!Dr.HasRows) { return entidad; }
                         while (Dr.Read())
@@ -142,11 +151,15 @@ namespace SistemaSanFelipe.Data
                              
                             List.Add(Entity);
                         }
-                        Dr.Close();
-
-                        var DrMain = Ado.ExecDataReaderProc("usp_listado_Reporte_venta_total_pollos", null);
-
+                        Dr.Close();   
                         List<TotalVenta> listTotalVenta = new List<TotalVenta>();
+                        var Parameters2 = new SqlParameter[]
+                        {
+                        new SqlParameter{ ParameterName = "@FechaInicial", SqlDbType = SqlDbType.DateTime, SqlValue = fechaIniDate},
+                        new SqlParameter{ ParameterName = "@FechaFinal", SqlDbType = SqlDbType.DateTime, SqlValue= fechaFinDate },
+                       };
+
+                        var DrMain = Ado.ExecDataReaderProc("usp_listado_Reporte_venta_total_pollos", Parameters2);
 
                         while (DrMain.Read())
                         {
@@ -174,8 +187,8 @@ namespace SistemaSanFelipe.Data
                                 TotalVenta.totalnroabono = (decimal)DrMain["totalnroabono"];
                             if (DrMain["totalporcobrar"] != DBNull.Value)
                                 TotalVenta.totalporcobrar = (decimal)DrMain["totalporcobrar"];
-                            if (DrMain["fechaSalidaVenta"] != DBNull.Value)
-                                TotalVenta.fechaSalidaVenta = (DateTime)DrMain["fechaSalidaVenta"];
+                            //if (DrMain["fechaSalidaVenta"] != DBNull.Value)
+                            //    TotalVenta.fechaSalidaVenta = (DateTime)DrMain["fechaSalidaVenta"];
 
                             listTotalVenta.Add(TotalVenta);
                         }
@@ -197,14 +210,23 @@ namespace SistemaSanFelipe.Data
 
         }
 
-        public List<ListadoPollosResponse> ObtenerListadoPollos()
+        public List<ListadoPollosResponse> ObtenerListadoPollos(DateTime StartDate, DateTime EndDate)
         {
             using (var Ado = new SQLServer(ConStr))
             {
                 try
                 {
                     List<ListadoPollosResponse> List = new List<ListadoPollosResponse>();
-                    var Dr = Ado.ExecDataReaderProc("usp_Obtener_Listado_Venta_Pollos", null);
+
+                    var Parameters = new SqlParameter[]
+                {
+                       
+                        new SqlParameter{ ParameterName = "@StartDate", SqlDbType = SqlDbType.DateTime, SqlValue = StartDate},
+                        new SqlParameter{ ParameterName = "@EndDate", SqlDbType = SqlDbType.DateTime, SqlValue= EndDate },
+                       
+                };
+
+                    var Dr = Ado.ExecDataReaderProc("usp_Obtener_Listado_Venta_Pollos", Parameters);
                     {
                         if (!Dr.HasRows) { return List; }
                         while (Dr.Read())

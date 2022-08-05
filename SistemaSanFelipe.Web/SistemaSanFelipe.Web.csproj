@@ -5,6 +5,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Rotativa\wkhtmltoimage.exe" />
+    <None Remove="Rotativa\wkhtmltopdf.exe" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Rotativa\wkhtmltoimage.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="EPPlus.Core" Version="1.5.4" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.Abstractions" Version="2.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.Cors" Version="2.2.0" />
@@ -32,7 +43,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Rotativa\" />
+    <None Include="wwwroot\Template\DescargarPdfPollos.xlsx" />
+    <None Include="wwwroot\Template\ModeloReportePollos.xlsx" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Rotativa\wkhtmltopdf.exe" />
   </ItemGroup>
 
 </Project>

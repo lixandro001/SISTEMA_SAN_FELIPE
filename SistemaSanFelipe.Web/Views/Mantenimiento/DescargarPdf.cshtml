@@ -1,5 +1,4 @@
-﻿@model  SistemaSanFelipe.Entity.Response.VentasReporteLista
- 
+﻿@model SistemaSanFelipe.Entity.Response.VentasReporteLista
 @{
     Layout = null;
     //var TotalVentas = ViewBag.model;
@@ -13,56 +12,65 @@
     decimal valor8 = 0;
     decimal valor9 = 0;
     decimal valor10 = 0;
+    string FFecha = string.Format("{0:dd/MM/yyyy}", DateTime.Today);
+    string hora = DateTime.Now.ToString("hh:mm:ss");
+
+    var maximo = DateTime.Today;
+    var minimo = DateTime.Today;
+
+    if (Model.ListaVentaGuiaReporte.Count>0)
+    {
+        maximo = Model.ListaVentaGuiaReporte.Max(x => x.fechaSalidaVenta);
+        minimo = Model.ListaVentaGuiaReporte.Min(x => x.fechaSalidaVenta);
+    }
+
+
+
 }
- 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reporte De Salidas De Pollos</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link href="~/css/stylePantalla.css" rel="stylesheet" />
 </head>
-
 <div class="card">
     <div class="card-header">
-
-        <h3 class="card-title">Soluciones Gomez  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Guia de Venta / Resumen por Clientes</h3>
+        <h3 class="card-title">Soluciones Gomez  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Guia de Venta Resumen por Clientes</h3>
         <label style="text-align:left">Rep :&nbsp; </label>
         <div style="text-align: right">
-            <label>Pag: </label>&nbsp;
-            <label>Fecha: </label>&nbsp;
-            <label>Hora: </label>&nbsp;
+            <label>Pag: 1 de 1  </label>&nbsp;&nbsp;&nbsp;&nbsp;
+            <label>Fecha:@FFecha</label>&nbsp;&nbsp;&nbsp;&nbsp;
+            <label>Hora:@hora </label>&nbsp;&nbsp;&nbsp;&nbsp;
         </div>
-
         <div>
             <div style="text-align:center">
-                <label>Del :&nbsp; </label>   <label> al :&nbsp;</label>
+                <label>Del : @minimo &nbsp; </label> <label> al :@maximo &nbsp;</label>
             </div>
         </div>
     </div>
     <br /><br />
-
     <div class="container">
         <table class="table table-striped">
             <thead>
                 <tr>
-                    <th>Zona</th>
-                    <th>Cliente</th>
-                    <th>Nro Jabas</th>
-                    <th>Nro Aves</th>
-                    <th>Peso Bruto</th>
-                    <th>Tara</th>
-                    <th>Peso Neto</th>
-                    <th>Precio Unitario</th>
-                    <th>Importe</th>
-                    <th>N.Cargo</th>
-                    <th>N.Abono</th>
-                    <th>Neto.Cobrar</th>
+                    <th WIDTH="0%">Zona</th>
+                    <th width="10%">Cliente</th>
+                    <th WIDTH="0%">Nro Jabas</th>
+                    <th WIDTH="0%">Nro Aves</th>
+                    <th WIDTH="0%">Peso Bruto</th>
+                    <th WIDTH="0%">Tara</th>
+                    <th WIDTH="0%">Peso Neto</th>
+                    <th WIDTH="0%">Precio Unitario</th>
+                    <th WIDTH="0%">Importe</th>
+                    <th WIDTH="0%">Cargo</th>
+                    <th WIDTH="0%">Abono</th>
+                    <th WIDTH="0%">Nt.Cobrar</th>
                 </tr>
             </thead>
             <tbody>
                 @foreach (var venta in Model.ListaVentaGuiaReporte)
                 {
-
                     if (venta.nombreUbigeo == "CAÑETE")
                     {
                         <tr>
@@ -104,9 +112,7 @@
                             </td>
                         </tr>
                     }
-
                 }
-
             </tbody>
         </table>
     </div>
@@ -115,18 +121,20 @@
         <table class="table table-striped">
             <thead>
                 <tr>
-                    <th>Zona</th>
-                    <th>total por zona</th>
-                    <th> Jabas por zona</th>
-                    <th> Aves por zona</th>
-                    <th> Bruto por zona</th>
-                    <th> Tara por zona</th>
-                    <th> Peso Neto </th>
-                    <th> Precio Unitario por zona</th>
-                    <th> Importe por zona</th>
-                    <th> N.Cargo por zona</th>
-                    <th> N.Abono por zona</th>
-                    <th> Neto.Cobrar por zona</th>
+                   
+
+                    <th WIDTH="0%"> Zona</th>
+                    <th WIDTH="10%">TotalxZona</th>
+                    <th WIDTH="0%"> JabasxZona</th>
+                    <th WIDTH="0%"> AvesxZona</th>
+                    <th WIDTH="0%"> BrutoxZona</th>
+                    <th WIDTH="0%"> TaraxZona</th>
+                    <th WIDTH="0%"> PesoxNeto </th>
+                    <th WIDTH="0%"> UnixZona</th>
+                    <th WIDTH="0%"> ImpoxZona</th>
+                    <th WIDTH="0%"> CarxZona</th>
+                    <th WIDTH="0%"> AbonxZona</th>
+                    <th WIDTH="0%"> CobraxZona</th>
                 </tr>
             </thead>
             @foreach (var item in Model.ListaTotalVenta)
@@ -135,18 +143,18 @@
                 {
                     <tbody>
                         <tr>
-                            <td style="background:#0094ff">@item.nombreUbigeo </td>
-                            <td style="background:#0094ff" width="250px">total zona</td>
-                            <td style="background:#0094ff" width="120px">@item.totaljabas</td>
-                            <td style="background:#0094ff" width="120px">@item.totalaves</td>
-                            <td style="background:#0094ff" width="120px">@item.totalpesobruto</td>
-                            <td style="background:#0094ff" width="120px">@item.totaltara</td>
-                            <td style="background:#0094ff" width="120px">@item.totalpesoneto</td>
-                            <td style="background:#0094ff" width="120px"></td>
-                            <td style="background:#0094ff" width="120px">@item.totalimporte</td>
-                            <td style="background:#0094ff" width="120px">@item.totalnrocargo</td>
-                            <td style="background:#0094ff" width="120px">@item.totalnroabono</td>
-                            <td style="background:#0094ff" width="120px">@item.totalporcobrar</td>
+                            <td style="background:#0094ff" WIDTH="0%">@item.nombreUbigeo </td>
+                            <td style="background:#0094ff" WIDTH="10%">TOTALxZONA</td>
+                            <td style="background:#0094ff" WIDTH="0%">@item.totaljabas</td>
+                            <td style="background:#0094ff" WIDTH="0%">@item.totalaves</td>
+                            <td style="background:#0094ff" WIDTH="0%">@item.totalpesobruto</td>
+                            <td style="background:#0094ff" WIDTH="0%">@item.totaltara</td>
+                            <td style="background:#0094ff" WIDTH="0%">@item.totalpesoneto</td>
+                            <td style="background:#0094ff" WIDTH="0%"></td>
+                            <td style="background:#0094ff" WIDTH="0%">@item.totalimporte</td>
+                            <td style="background:#0094ff" WIDTH="0%">@item.totalnrocargo</td>
+                            <td style="background:#0094ff" WIDTH="0%">@item.totalnroabono</td>
+                            <td style="background:#0094ff" WIDTH="0%">@item.totalporcobrar</td>
                         </tr>
                     </tbody>
                 }
@@ -160,18 +168,18 @@
         <table class="table table-striped">
             <thead>
                 <tr>
-                    <th>Zona</th>
-                    <th>Cliente</th>
-                    <th>Nro Jabas</th>
-                    <th>Nro Aves</th>
-                    <th>Peso Bruto</th>
-                    <th>Tara</th>
-                    <th>Peso Neto</th>
-                    <th>Precio Unitario</th>
-                    <th>Importe</th>
-                    <th>N.Cargo</th>
-                    <th>N.Abono</th>
-                    <th>Neto.Cobrar</th>
+                    <th WIDTH="0%">Zona</th>
+                    <th width="10%">Cliente</th>
+                    <th WIDTH="0%">Nro Jabas</th>
+                    <th WIDTH="0%">Nro Aves</th>
+                    <th WIDTH="0%">Peso Bruto</th>
+                    <th WIDTH="0%">Tara</th>
+                    <th WIDTH="0%">Peso Neto</th>
+                    <th WIDTH="0%">Precio Unitario</th>
+                    <th WIDTH="0%">Importe</th>
+                    <th WIDTH="0%">Cargo</th>
+                    <th WIDTH="0%">Abono</th>
+                    <th WIDTH="0%">Nt.Cobrar</th>
                 </tr>
             </thead>
             <tbody>
@@ -230,18 +238,19 @@
         <table class="table table-striped">
             <thead>
                 <tr>
-                    <th>Zona</th>
-                    <th>total por zona</th>
-                    <th> Jabas por zona</th>
-                    <th> Aves por zona</th>
-                    <th> Bruto por zona</th>
-                    <th> Tara por zona</th>
-                    <th> Peso Neto </th>
-                    <th> Precio Unitario por zona</th>
-                    <th> Importe por zona</th>
-                    <th> N.Cargo por zona</th>
-                    <th> N.Abono por zona</th>
-                    <th> Neto.Cobrar por zona</th>
+                    <th WIDTH="0%"> Zona</th>
+                    <th WIDTH="10%">TotalxZona</th>
+                    <th WIDTH="0%"> JabasxZona</th>
+                    <th WIDTH="0%"> AvesxZona</th>
+                    <th WIDTH="0%"> BrutoxZona</th>
+                    <th WIDTH="0%"> TaraxZona</th>
+                    <th WIDTH="0%"> PesoxNeto </th>
+                    <th WIDTH="0%"> UnixZona</th>
+                    <th WIDTH="0%"> ImpoxZona</th>
+                    <th WIDTH="0%"> CarxZona</th>
+                    <th WIDTH="0%"> AbonxZona</th>
+                    <th WIDTH="0%"> CobraxZona</th>
+                     
                 </tr>
             </thead>
             @foreach (var item in Model.ListaTotalVenta)
@@ -264,7 +273,7 @@
                             <td style="background:#c6bcbc" width="120px">@item.totalporcobrar</td>
                         </tr>
                     </tbody>
- 
+
                 }
             }
         </table>
@@ -289,51 +298,47 @@
         <table class="table table-striped">
             <thead>
                 <tr>
-                    <th></th>
-                    <th>total</th>
-                    <th>total Jabas</th>
-                    <th>total Aves</th>
-                    <th>total Bruto </th>
-                    <th>total Tara </th>
-                    <th> total Peso Neto </th>
-                    <th> total Precio Unitario </th>
-                    <th>total Importe </th>
-                    <th>total N.Cargo </th>
-                    <th>total N.Abono </th>
-                    <th>total Neto.Cobrar</th>
+
+                  
+
+                    <th WIDTH="8%" ></th>
+                    <th WIDTH="8%">total</th>
+                    <th WIDTH="0%">totJabas</th>
+                    <th WIDTH="0%">totAves</th>
+                    <th WIDTH="0%">totBruto </th>
+                    <th WIDTH="0%">totTara </th>
+                    <th WIDTH="0%">totPeso Neto </th>
+                    <th WIDTH="0%">totUnitario </th>
+                    <th WIDTH="0%">totImporte </th>
+                    <th WIDTH="0%">totCargo </th>
+                    <th WIDTH="0%">totAbono </th>
+                    <th WIDTH="0%">totCobrar</th>
+                     
                 </tr>
             </thead>
-           
-           <tbody>             
-            <tr>
-                @*<td><strong>@Model.ListarCostos.Sum(x => x.MaBRID)</strong></td>*@
-                <td width="250px"></td>
-                <td width="250px"></td>
-                <td width="120px">@valor1</td>
-                <td width="120px">@valor2</td>
-                <td width="120px">@valor3</td>
-                <td width="120px">@valor4</td>
-                <td width="120px">@valor5</td>
-                <td width="120px"></td>
-                <td width="120px">@valor6</td>
-                <td width="120px">@valor7</td>
-                <td width="120px">@valor8</td>
-                <td width="120px">@valor9</td>
-            </tr>
-        </tbody>
 
-    
+            <tbody>
+                <tr>
+                    @*<td><strong>@Model.ListarCostos.Sum(x => x.MaBRID)</strong></td>*@
+                    <td width="200px"></td>
+                    <td width="200px"></td>
+                    <td width="20px">@valor1</td>
+                    <td width="120px">@valor2</td>
+                    <td width="120px">@valor3</td>
+                    <td width="120px">@valor4</td>
+                    <td width="120px">@valor5</td>
+                    <td width="120px"></td>
+                    <td width="120px">@valor6</td>
+                    <td width="120px">@valor7</td>
+                    <td width="120px">@valor8</td>
+                    <td width="120px">@valor9</td>
+                </tr>
+            </tbody>
+
+
         </table>
     </div>
 
-
-
-
 </div>
 
-    <!-- /.card-body -->
  
-<!-- /.card -->
-@*<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>*@

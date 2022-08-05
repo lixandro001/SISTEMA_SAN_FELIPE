@@ -2,6 +2,8 @@
 $(function () {
     fnObtenerGuiaVenta();
 
+     
+
     $("#tabDescTable").DataTable({
         "paging": true,
         "lengthChange": false,
@@ -37,8 +39,6 @@ $(function () {
                     return `<div style="text-align:center;">
                             <a class="fa fa-pencil" href="#"  ;fnViewRegister('${data.idventa}')">GSA</a>
                         </div>`;
-               
-
             }
         }
         ]
@@ -49,6 +49,20 @@ $(function () {
         format: "dd/mm/yyyy"
     });
 
+
+    $("#btnReporteExcel").on("click", function () {
+
+        var fechaInicial = "";
+        var fechaFinal = "";
+
+        fechaInicial = $("#txtStartDate").val();
+        fechaFinal = $("#txtEndDate").val();
+         
+        location.href = '/Mantenimiento/ExportExcel?StartDate=' + fechaInicial + "&EndDate=" + fechaFinal;
+        /*$("#frmExport").submit();*/
+    });
+     
+
     $("#btnConsultar").on("click", function () {
         fnObtenerGuiaVenta();
     });
@@ -56,6 +70,16 @@ $(function () {
     $("#btnNuevo").on("click", function () {
         fnViewForm();
     });
+
+     
+
+    $("#btnReportePdf").on("click", function () {
+        consultarPdf();
+    });
+
+
+
+
 });
 
 
@@ -79,6 +103,29 @@ function fnObtenerGuiaVenta() {
         }
     });
 }
+
+function consultarPdf() {
+    var startDate = "";
+    var endDate = "";
+
+    startDate = $("#txtStartDate").val();
+    endDate = $("#txtEndDate").val();
+
+    //var replaceSlashes = $(this).val().replace(/\\/g, "/");
+    //$(this).val(replaceSlashes);
+
+    var nuevofechaInicial = startDate.replace("/", "-").replace("/", "-");
+    var nuevofechaFinal = endDate.replace("/", "-").replace("/", "-");
+
+     
+    console.log(nuevofechaInicial);
+    console.log(nuevofechaFinal);
+
+    location.href = '/Mantenimiento/DescargarPdf?fechaInicio=' + nuevofechaInicial + "&FechaFinal=" + nuevofechaFinal;
+}
+
+
+
 
 function fnViewRegister(CodeRegister) {
     location.href = '/Main/FormularioPerfilComercial/?code=' + CodeRegister;
